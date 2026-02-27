@@ -3,118 +3,416 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Destinations — Coming Soon</title>
+  <title>Nicole &amp; Charlie's Honeymoon — New Zealand 2026</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- ══════════════════════ HERO ══════════════════════ -->
   <header class="hero">
-    <div class="hero-content">
-      <p class="hero-label">Launching in</p>
+    <div class="hero-inner">
+      <p class="eyebrow">New Zealand &bull; 2026</p>
+      <h1 class="hero-title">Nicole &amp; Charlie's<br>Honeymoon</h1>
+      <p class="hero-label">Departing in</p>
       <div id="countdown" class="countdown">
-        <div class="countdown-unit">
-          <span id="days">00</span>
-          <label>Days</label>
-        </div>
+        <div class="countdown-unit"><span id="days">00</span><label>Days</label></div>
         <div class="countdown-sep">:</div>
-        <div class="countdown-unit">
-          <span id="hours">00</span>
-          <label>Hours</label>
-        </div>
+        <div class="countdown-unit"><span id="hours">00</span><label>Hours</label></div>
         <div class="countdown-sep">:</div>
-        <div class="countdown-unit">
-          <span id="minutes">00</span>
-          <label>Minutes</label>
-        </div>
+        <div class="countdown-unit"><span id="minutes">00</span><label>Minutes</label></div>
         <div class="countdown-sep">:</div>
-        <div class="countdown-unit">
-          <span id="seconds">00</span>
-          <label>Seconds</label>
-        </div>
+        <div class="countdown-unit"><span id="seconds">00</span><label>Seconds</label></div>
       </div>
-      <p class="hero-date">November 5, 2026</p>
+      <p class="hero-subline">November 6, 2026 &mdash; New York City</p>
     </div>
   </header>
 
+  <!-- ══════════════════════ ITINERARY ══════════════════════ -->
   <main>
-    <section class="destinations">
-      <h2 class="section-title">Explore Our Destinations</h2>
-      <p class="section-subtitle">A curated selection of extraordinary places, coming soon.</p>
+    <div class="itinerary-wrap">
 
-      <div class="cards">
+      <header class="section-header">
+        <h2>The Full Itinerary</h2>
+        <p>13 nights confirmed &bull; 7 nights TBD &bull; New Zealand</p>
+      </header>
 
-        <article class="card">
-          <div class="card-img">
-            <img src="https://placehold.co/600x400/1a1a2e/e0e0e0?text=Kyoto%2C+Japan" alt="Kyoto, Japan" />
+      <!-- ─── NYC DEPARTURE ─── -->
+      <article class="stop" id="nyc">
+        <div class="stop-visual stop-visual--nyc">
+          <div class="stop-visual-inner">
+            <span class="stop-num">Departure</span>
+            <h3>New York City</h3>
+            <p>JFK International Airport</p>
           </div>
-          <div class="card-body">
-            <h3>Kyoto, Japan</h3>
-            <p>Ancient temples, bamboo forests, and timeless tea ceremonies await in Japan's cultural capital.</p>
-            <span class="card-tag">Asia</span>
+        </div>
+        <div class="stop-body">
+          <div class="stop-topbar">
+            <span class="stop-dates">Friday, November 6, 2026</span>
+            <span class="stop-tag">Flight Day</span>
           </div>
-        </article>
+          <div class="stop-sections">
+            <div class="ssec">
+              <h4>Travel Logistics</h4>
+              <div class="ssec-body placeholder-box"><p>Add your flight number, departure time, airline, layover details, and arrival info here.</p></div>
+            </div>
+            <div class="ssec">
+              <h4>Notes &amp; Tips</h4>
+              <div class="ssec-body placeholder-box"><p>Packing reminders, airport lounge access, check-in times, what to do on the long-haul flight, etc.</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
 
-        <article class="card">
-          <div class="card-img">
-            <img src="https://placehold.co/600x400/16213e/e0e0e0?text=Santorini%2C+Greece" alt="Santorini, Greece" />
+      <!-- ─── STOP 1: WAIHEKE ISLAND ─── -->
+      <article class="stop" id="waiheke">
+        <div class="stop-visual stop-visual--waiheke">
+          <div class="stop-visual-inner">
+            <span class="stop-num">Stop 1 of 6</span>
+            <h3>Waiheke Island</h3>
+            <p>Waiheke Island Resort &bull; 2 Nights</p>
           </div>
-          <div class="card-body">
-            <h3>Santorini, Greece</h3>
-            <p>Whitewashed cliffs, azure domes, and breathtaking sunsets over the Aegean Sea.</p>
-            <span class="card-tag">Europe</span>
+        </div>
+        <div class="stop-body">
+          <div class="stop-topbar">
+            <span class="stop-dates">Sun, Nov 8 &ndash; Tue, Nov 10</span>
+            <span class="stop-tag">2 Nights</span>
           </div>
-        </article>
+          <div class="stop-sections">
+            <div class="ssec">
+              <h4>Travel Logistics</h4>
+              <div class="ssec-body placeholder-box"><p>Ferry from Auckland Britomart Pier (~35 min) or private helicopter transfer. Add flight arrival and ferry/transfer details here.</p></div>
+            </div>
+            <div class="ssec">
+              <h4>Activities</h4>
+              <div class="days-list">
+                <details class="day" open>
+                  <summary>Day 1 &mdash; Sun, Nov 8</summary>
+                  <div class="slots">
+                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                  </div>
+                </details>
+                <details class="day">
+                  <summary>Day 2 &mdash; Mon, Nov 9</summary>
+                  <div class="slots">
+                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                  </div>
+                </details>
+              </div>
+            </div>
+            <div class="ssec">
+              <h4>Restaurants</h4>
+              <div class="ssec-body placeholder-box"><p>Add restaurant recommendations here.</p></div>
+            </div>
+            <div class="ssec">
+              <h4>Notes &amp; Tips</h4>
+              <div class="ssec-body placeholder-box"><p>Vineyard tours, beaches, ferry schedule, car hire on island, etc.</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
 
-        <article class="card">
-          <div class="card-img">
-            <img src="https://placehold.co/600x400/0f3460/e0e0e0?text=Patagonia%2C+Argentina" alt="Patagonia, Argentina" />
+      <!-- ─── STOP 2: RAGLAN ─── -->
+      <article class="stop" id="raglan">
+        <div class="stop-visual stop-visual--raglan">
+          <div class="stop-visual-inner">
+            <span class="stop-num">Stop 2 of 6</span>
+            <h3>Raglan</h3>
+            <p>Te Whaanga Retreat &amp; Spa &bull; 2 Nights</p>
           </div>
-          <div class="card-body">
-            <h3>Patagonia, Argentina</h3>
-            <p>Jagged peaks, glacial lakes, and vast untouched wilderness at the end of the world.</p>
-            <span class="card-tag">South America</span>
+        </div>
+        <div class="stop-body">
+          <div class="stop-topbar">
+            <span class="stop-dates">Tue, Nov 10 &ndash; Thu, Nov 12</span>
+            <span class="stop-tag">2 Nights</span>
           </div>
-        </article>
+          <div class="stop-sections">
+            <div class="ssec">
+              <h4>Travel Logistics</h4>
+              <div class="ssec-body placeholder-box"><p>Ferry back to Auckland, then drive ~2.5 hrs south via SH1 and SH23. Add rental car and transfer details here.</p></div>
+            </div>
+            <div class="ssec">
+              <h4>Activities</h4>
+              <div class="days-list">
+                <details class="day" open>
+                  <summary>Day 1 &mdash; Tue, Nov 10</summary>
+                  <div class="slots">
+                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                  </div>
+                </details>
+                <details class="day">
+                  <summary>Day 2 &mdash; Wed, Nov 11</summary>
+                  <div class="slots">
+                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                  </div>
+                </details>
+              </div>
+            </div>
+            <div class="ssec">
+              <h4>Restaurants</h4>
+              <div class="ssec-body placeholder-box"><p>Add restaurant recommendations here.</p></div>
+            </div>
+            <div class="ssec">
+              <h4>Notes &amp; Tips</h4>
+              <div class="ssec-body placeholder-box"><p>Spa treatments, surf lessons, harbour views, Wainui Beach, etc.</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
 
-        <article class="card">
-          <div class="card-img">
-            <img src="https://placehold.co/600x400/1b4332/e0e0e0?text=Marrakech%2C+Morocco" alt="Marrakech, Morocco" />
+      <!-- ─── STOP 3: ROTORUA / LAKE ROTOITI ─── -->
+      <article class="stop" id="rotorua">
+        <div class="stop-visual stop-visual--rotorua">
+          <div class="stop-visual-inner">
+            <span class="stop-num">Stop 3 of 6</span>
+            <h3>Rotorua / Lake Rotoiti</h3>
+            <p>VR Rotorua Lake Resort &bull; 1 Night</p>
           </div>
-          <div class="card-body">
-            <h3>Marrakech, Morocco</h3>
-            <p>Vibrant souks, ornate riads, and a sensory tapestry of colour, spice, and sound.</p>
-            <span class="card-tag">Africa</span>
+        </div>
+        <div class="stop-body">
+          <div class="stop-topbar">
+            <span class="stop-dates">Thu, Nov 12 &ndash; Fri, Nov 13</span>
+            <span class="stop-tag">1 Night</span>
           </div>
-        </article>
+          <div class="stop-sections">
+            <div class="ssec">
+              <h4>Travel Logistics</h4>
+              <div class="ssec-body placeholder-box"><p>Drive from Raglan ~2.5 hrs east via SH1 and SH5. Add car hire and route details here.</p></div>
+            </div>
+            <div class="ssec">
+              <h4>Activities</h4>
+              <div class="days-list">
+                <details class="day" open>
+                  <summary>Day 1 &mdash; Thu, Nov 12</summary>
+                  <div class="slots">
+                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                  </div>
+                </details>
+              </div>
+            </div>
+            <div class="ssec">
+              <h4>Restaurants</h4>
+              <div class="ssec-body placeholder-box"><p>Add restaurant recommendations here.</p></div>
+            </div>
+            <div class="ssec">
+              <h4>Notes &amp; Tips</h4>
+              <div class="ssec-body placeholder-box"><p>Geothermal pools, Maori cultural experiences, Te Puia, Polynesian Spa, Lake Rotoiti hot springs, etc.</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
 
-        <article class="card">
-          <div class="card-img">
-            <img src="https://placehold.co/600x400/2d3a2e/e0e0e0?text=Iceland" alt="Iceland" />
+      <!-- ─── STOP 4: QUEENSTOWN ─── -->
+      <article class="stop" id="queenstown">
+        <div class="stop-visual stop-visual--queenstown">
+          <div class="stop-visual-inner">
+            <span class="stop-num">Stop 4 of 6</span>
+            <h3>Queenstown</h3>
+            <p>Kamana Lakehouse &bull; 5 Nights</p>
           </div>
-          <div class="card-body">
-            <h3>Iceland</h3>
-            <p>Northern lights, volcanic landscapes, geothermal pools, and midnight sun all in one island.</p>
-            <span class="card-tag">Europe</span>
+        </div>
+        <div class="stop-body">
+          <div class="stop-topbar">
+            <span class="stop-dates">Fri, Nov 13 &ndash; Wed, Nov 18</span>
+            <span class="stop-tag">5 Nights</span>
           </div>
-        </article>
+          <div class="stop-sections">
+            <div class="ssec">
+              <h4>Travel Logistics</h4>
+              <div class="ssec-body placeholder-box"><p>Flight from Rotorua (ROT) or Tauranga (TRG) to Queenstown (ZQN) ~1.5 hrs. Add flight and airport transfer details here.</p></div>
+            </div>
+            <div class="ssec">
+              <h4>Activities</h4>
+              <div class="days-list">
+                <details class="day" open>
+                  <summary>Day 1 &mdash; Fri, Nov 13</summary>
+                  <div class="slots">
+                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                  </div>
+                </details>
+                <details class="day">
+                  <summary>Day 2 &mdash; Sat, Nov 14</summary>
+                  <div class="slots">
+                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                  </div>
+                </details>
+                <details class="day">
+                  <summary>Day 3 &mdash; Sun, Nov 15</summary>
+                  <div class="slots">
+                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                  </div>
+                </details>
+                <details class="day">
+                  <summary>Day 4 &mdash; Mon, Nov 16</summary>
+                  <div class="slots">
+                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                  </div>
+                </details>
+                <details class="day">
+                  <summary>Day 5 &mdash; Tue, Nov 17</summary>
+                  <div class="slots">
+                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                  </div>
+                </details>
+              </div>
+            </div>
+            <div class="ssec">
+              <h4>Restaurants</h4>
+              <div class="ssec-body placeholder-box"><p>Add restaurant recommendations here.</p></div>
+            </div>
+            <div class="ssec">
+              <h4>Notes &amp; Tips</h4>
+              <div class="ssec-body placeholder-box"><p>Gondola &amp; Skyline, bungee jumping, AJ Hackett, wine tours, Glenorchy day trip, jet boating, etc.</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
 
-        <article class="card">
-          <div class="card-img">
-            <img src="https://placehold.co/600x400/3d2645/e0e0e0?text=Bali%2C+Indonesia" alt="Bali, Indonesia" />
+      <!-- ─── STOP 5: MILFORD SOUND ─── -->
+      <article class="stop" id="milford">
+        <div class="stop-visual stop-visual--milford">
+          <div class="stop-visual-inner">
+            <span class="stop-num">Stop 5 of 6</span>
+            <h3>Milford Sound</h3>
+            <p>Overnight Cruise &bull; 1 Night</p>
           </div>
-          <div class="card-body">
-            <h3>Bali, Indonesia</h3>
-            <p>Terraced rice paddies, sacred temples, lush jungles, and warm tropical coastlines.</p>
-            <span class="card-tag">Asia</span>
+        </div>
+        <div class="stop-body">
+          <div class="stop-topbar">
+            <span class="stop-dates">Wed, Nov 18 &ndash; Thu, Nov 19</span>
+            <span class="stop-tag">1 Night Cruise</span>
           </div>
-        </article>
+          <div class="stop-sections">
+            <div class="ssec">
+              <h4>Travel Logistics</h4>
+              <div class="ssec-body placeholder-box"><p>Drive from Queenstown ~4 hrs via SH6/SH94 (scenic), or scenic flight to Milford Sound. Add cruise operator, boarding time, and vessel details here.</p></div>
+            </div>
+            <div class="ssec">
+              <h4>Cruise Experience</h4>
+              <div class="days-list">
+                <details class="day" open>
+                  <summary>Aboard &mdash; Wed, Nov 18</summary>
+                  <div class="slots">
+                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Boarding, settling in, first cruise through the fiord...</p></div></div>
+                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Dinner on board, stargazing, kayaking options at dusk...</p></div></div>
+                  </div>
+                </details>
+                <details class="day">
+                  <summary>Disembark &mdash; Thu, Nov 19</summary>
+                  <div class="slots">
+                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Sunrise on the fiord, breakfast on board, departure time...</p></div></div>
+                  </div>
+                </details>
+              </div>
+            </div>
+            <div class="ssec">
+              <h4>Notes &amp; Tips</h4>
+              <div class="ssec-body placeholder-box"><p>Cruise operator details, what to pack, Mitre Peak, Stirling Falls, dolphins, fur seals, penguins, etc.</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
 
-      </div>
-    </section>
+      <!-- ─── STOP 6: MANAPOURI ─── -->
+      <article class="stop" id="manapouri">
+        <div class="stop-visual stop-visual--manapouri">
+          <div class="stop-visual-inner">
+            <span class="stop-num">Stop 6 of 6</span>
+            <h3>Manapouri</h3>
+            <p>Cabot Lodge &bull; 2 Nights</p>
+          </div>
+        </div>
+        <div class="stop-body">
+          <div class="stop-topbar">
+            <span class="stop-dates">Thu, Nov 19 &ndash; Sat, Nov 21</span>
+            <span class="stop-tag">2 Nights</span>
+          </div>
+          <div class="stop-sections">
+            <div class="ssec">
+              <h4>Travel Logistics</h4>
+              <div class="ssec-body placeholder-box"><p>From Milford Sound, drive ~1.5 hrs via Te Anau to Manapouri. Add transfer and check-in details here.</p></div>
+            </div>
+            <div class="ssec">
+              <h4>Activities</h4>
+              <div class="days-list">
+                <details class="day" open>
+                  <summary>Day 1 &mdash; Thu, Nov 19</summary>
+                  <div class="slots">
+                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                  </div>
+                </details>
+                <details class="day">
+                  <summary>Day 2 &mdash; Fri, Nov 20</summary>
+                  <div class="slots">
+                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                  </div>
+                </details>
+              </div>
+            </div>
+            <div class="ssec">
+              <h4>Restaurants</h4>
+              <div class="ssec-body placeholder-box"><p>Add dining options at Cabot Lodge and nearby Te Anau here.</p></div>
+            </div>
+            <div class="ssec">
+              <h4>Notes &amp; Tips</h4>
+              <div class="ssec-body placeholder-box"><p>Doubtful Sound day trip, kayaking on Lake Manapouri, remote wilderness walks, stargazing, etc.</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ─── TBD: 7 MORE NIGHTS ─── -->
+      <article class="stop stop--tbd" id="tbd">
+        <div class="stop-visual stop-visual--tbd">
+          <div class="stop-visual-inner">
+            <span class="stop-num">Coming Soon</span>
+            <h3>7 More Nights</h3>
+            <p>Still figuring this out...</p>
+          </div>
+        </div>
+        <div class="stop-body">
+          <div class="stop-topbar">
+            <span class="stop-dates">Sat, Nov 21 &ndash; Sat, Nov 28</span>
+            <span class="stop-tag">7 Nights TBD</span>
+          </div>
+          <div class="stop-sections">
+            <div class="ssec">
+              <div class="tbd-placeholder">
+                <p>This chapter of the adventure is still being written. Check back soon!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Destinations. All rights reserved.</p>
+  <footer class="site-footer">
+    <p>Nicole &amp; Charlie &bull; November 2026 &bull; New Zealand</p>
   </footer>
 
   <script src="script.js"></script>

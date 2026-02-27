@@ -1,4 +1,4 @@
-const TARGET = new Date('2026-11-05T00:00:00');
+const TARGET = new Date('2026-11-06T00:00:00');
 
 const pad = (n) => String(n).padStart(2, '0');
 
@@ -7,7 +7,7 @@ function updateCountdown() {
   const diff = TARGET - now;
 
   if (diff <= 0) {
-    document.getElementById('countdown').innerHTML = '<p class="launched">We have launched!</p>';
+    document.getElementById('countdown').innerHTML = '<p style="font-size:1.3rem;color:var(--accent);letter-spacing:0.05em">Wheels up! Have an amazing trip!</p>';
     return;
   }
 
