@@ -2,6 +2,38 @@
 
 This guide defines standards and best practices for enhancing a vanilla HTML/CSS/JS honeymoon itinerary website. The site is a personal travel planning tool and shareable page — not a production SaaS app. Prioritize visual polish, usability, and progressive enhancement over framework complexity.
 
+## Current Status
+
+### Last Updated
+February 28, 2026
+
+### What's Been Done
+- Hero section with a 4-photo crossfading carousel (Milford Sound, Queenstown, Manapouri, Waiheke Island)
+- Live countdown timer ticking down to departure (Nov 6, 2026, NYC)
+- "At a Glance" summary table listing all 14 confirmed nights with dates, locations, and hotels
+- Interactive Leaflet.js map using CartoDB Voyager tiles with numbered color-coded teardrop pins and a dashed route polyline
+- Map pins pulse/enlarge as the user scrolls to the corresponding stop card
+- Clicking a map pin scrolls to and auto-expands the relevant stop card
+- Sticky navigation bar with per-destination color dots and active-section highlighting via IntersectionObserver
+- Collapsible stop cards using native `<details>`/`<summary>` with animated chevron
+- Per-destination hero photo backgrounds on each stop card
+- Day-by-day nested accordion (Morning / Afternoon / Evening time slots) for each stop
+- Expand / Collapse All button for the full itinerary
+- Scroll-to-top floating button
+- Full print stylesheet (hides hero, map, nav; forces all details open)
+- Mobile-responsive layout (single-column glance table, static map, horizontal-scroll nav)
+- Open Graph / Twitter Card meta tags for social sharing
+- Google Maps address links on each stop card
+- Emoji favicon and Inter font loaded via Google Fonts
+
+### What's Next
+- Fill in actual flight details, layover info, and airline for the NYC departure
+- Add travel logistics for each stop (transfer times, car hire, ferry/flight details)
+- Fill in day-by-day activities for all stops (currently all placeholder text)
+- Add restaurant recommendations for each destination
+- Confirm and book the 7 remaining nights (Nov 21–28) and add them to the site
+- Add actual booking/reservation reference numbers and check-in times
+
 ## Project Context
 
 - **Stack**: Vanilla HTML, CSS, JavaScript (no frameworks)
