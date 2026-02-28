@@ -47,37 +47,35 @@ body {
 /* ── Hero photo crossfade carousel ── */
 .hero-photos {
   position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0; /* inset fallback for iOS < 14.5 */
   inset: 0;
   z-index: 0;
 }
 
 .hero-photo {
   position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0; /* inset fallback for iOS < 14.5 */
   inset: 0;
-  background-size: cover;
-  background-position: center;
   opacity: 0;
   animation: heroSlide 20s infinite;
   animation-fill-mode: backwards;
   will-change: opacity, transform;
+  overflow: hidden; /* clip the img to the frame */
 }
 
-.hero-photo--1 {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Milford_Sound_(New_Zealand).JPG/1400px-Milford_Sound_(New_Zealand).JPG');
-  animation-delay: -1s;
+/* Fill the frame with an <img> so browsers can't skip it as a decorative background */
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
-.hero-photo--2 {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/View_from_Ben_Lomond_over_Lake_Wakatipu_towards_the_Remarkables_in_spring.jpg/1400px-View_from_Ben_Lomond_over_Lake_Wakatipu_towards_the_Remarkables_in_spring.jpg');
-  animation-delay: 4s;
-}
-.hero-photo--3 {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg/1400px-Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg');
-  animation-delay: 9s;
-}
-.hero-photo--4 {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Waiheke_Island_Vineyard.jpg/1400px-Waiheke_Island_Vineyard.jpg');
-  animation-delay: 14s;
-}
+
+.hero-photo--1 { animation-delay: -1s; }
+.hero-photo--2 { animation-delay:  4s; }
+.hero-photo--3 { animation-delay:  9s; }
+.hero-photo--4 { animation-delay: 14s; }
 
 @keyframes heroSlide {
   0%   { opacity: 0; transform: scale(1.0); }
@@ -90,6 +88,7 @@ body {
 /* Dark vignette overlay — kept heavier in the center where text lives */
 .hero-overlay {
   position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0; /* inset fallback for iOS < 14.5 */
   inset: 0;
   z-index: 1;
   background: linear-gradient(
@@ -629,6 +628,7 @@ a.gr:hover .gr-loc {
 .stop-visual::after {
   content: '';
   position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0; /* inset fallback for iOS < 14.5 */
   inset: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.22) 55%, rgba(0,0,0,0.05) 100%);
   pointer-events: none;

@@ -21,7 +21,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://unpkg.com" />
   <link rel="preconnect" href="https://basemaps.cartocdn.com" crossorigin />
-  <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin />
+  <link rel="preconnect" href="https://upload.wikimedia.org" />
+  <!-- Preload the first carousel frame so it's ready before the animation reveals it -->
+  <link rel="preload" as="image" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Milford_Sound_(New_Zealand).JPG/1400px-Milford_Sound_(New_Zealand).JPG" />
 
   <!-- Google Font: Inter for consistent cross-platform typography -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -34,10 +36,22 @@
   <!-- ══════════════════════ HERO ══════════════════════ -->
   <header class="hero">
     <div class="hero-photos" aria-hidden="true">
-      <div class="hero-photo hero-photo--1"></div>
-      <div class="hero-photo hero-photo--2"></div>
-      <div class="hero-photo hero-photo--3"></div>
-      <div class="hero-photo hero-photo--4"></div>
+      <div class="hero-photo hero-photo--1">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Milford_Sound_(New_Zealand).JPG/1400px-Milford_Sound_(New_Zealand).JPG"
+             alt="" fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero-photo hero-photo--2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/View_from_Ben_Lomond_over_Lake_Wakatipu_towards_the_Remarkables_in_spring.jpg/1400px-View_from_Ben_Lomond_over_Lake_Wakatipu_towards_the_Remarkables_in_spring.jpg"
+             alt="" decoding="async">
+      </div>
+      <div class="hero-photo hero-photo--3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg/1400px-Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg"
+             alt="" decoding="async">
+      </div>
+      <div class="hero-photo hero-photo--4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Waiheke_Island_Vineyard.jpg/1400px-Waiheke_Island_Vineyard.jpg"
+             alt="" decoding="async">
+      </div>
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-inner">

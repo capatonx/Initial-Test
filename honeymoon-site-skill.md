@@ -25,6 +25,8 @@ February 28, 2026
 - Open Graph / Twitter Card meta tags for social sharing
 - Google Maps address links on each stop card
 - Emoji favicon and Inter font loaded via Google Fonts
+- **Accessibility / contrast pass (Feb 2026):** bumped `--text-muted` and `--text-placeholder` CSS variables for ≥ 4:1 contrast on dark surfaces; added `text-shadow` to all hero text; darkened hero overlay (center zone 18% → 48%); bumped small body text to ≥ 14–16 px across the full page; strengthened stop-card gradient overlays
+- **Mobile image fix (Feb 2026):** hero carousel photos converted from CSS `background-image` to real `<img>` tags with `object-fit: cover` so browsers can't skip them in data-saver mode; added `top/right/bottom/left: 0` fallbacks alongside every `inset: 0` to fix invisible hero on iOS < 14.5 (which doesn't support the `inset` shorthand); added `fetchpriority="high"` on the first carousel frame and a `<link rel="preload">` hint; fixed `crossorigin` mismatch on the Wikimedia preconnect
 
 ### What's Next
 - Fill in actual flight details, layover info, and airline for the NYC departure
