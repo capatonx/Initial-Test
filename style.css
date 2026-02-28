@@ -283,6 +283,149 @@ body {
 .gr--tbd .gr-loc   { color: var(--text-muted); font-style: italic; }
 .gr--flight .gr-loc { color: var(--accent); }
 
+/* Make glance rows look and behave as links */
+a.gr {
+  text-decoration: none;
+  cursor: pointer;
+  display: grid;
+}
+
+a.gr .gr-loc {
+  transition: color 0.15s;
+}
+
+a.gr:hover .gr-loc {
+  color: var(--accent);
+}
+
+/* Glance 2-column layout: table left, map right */
+.glance-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.nz-map {
+  height: 500px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  position: sticky;
+  top: 52px;
+}
+
+/* Leaflet popup dark-theme overrides */
+.leaflet-popup-content-wrapper {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
+  color: var(--text);
+}
+
+.leaflet-popup-tip {
+  background: var(--surface-2);
+}
+
+.leaflet-popup-content {
+  margin: 10px 12px;
+}
+
+.map-popup strong {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.18rem;
+}
+
+.map-popup span {
+  display: block;
+  font-size: 0.73rem;
+  color: var(--text-muted);
+  margin-bottom: 0.45rem;
+}
+
+.map-popup a {
+  font-size: 0.76rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.map-popup a:hover {
+  text-decoration: underline;
+}
+
+/* ════════════════════════════════════════════
+   STICKY STOP NAV
+════════════════════════════════════════════ */
+.stop-nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(22, 22, 22, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.stop-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.stop-nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.18rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.55rem 1rem;
+  white-space: nowrap;
+}
+
+.sn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.18s, background 0.18s, border-color 0.18s;
+  border: 1px solid transparent;
+  flex-shrink: 0;
+}
+
+.sn-link::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.sn-link--flight::before  { background: var(--accent); }
+.sn-link--waiheke::before { background: #c4903a; }
+.sn-link--raglan::before  { background: #2aa0c8; }
+.sn-link--rotorua::before { background: #58b458; }
+.sn-link--qtown::before   { background: #4088c8; }
+.sn-link--milford::before { background: #28a898; }
+.sn-link--manap::before   { background: #50b050; }
+.sn-link--tbd::before     { background: #4a4268; }
+
+.sn-link:hover,
+.sn-link.is-active {
+  color: var(--text);
+  background: var(--surface-2);
+  border-color: var(--border);
+}
+
 /* ════════════════════════════════════════════
    ITINERARY WRAPPER
 ════════════════════════════════════════════ */
@@ -480,6 +623,68 @@ body {
 }
 
 /* ════════════════════════════════════════════
+   COLLAPSIBLE STOP BODY
+════════════════════════════════════════════ */
+.stop-expand {
+  display: block;
+}
+
+/* The <summary> IS the topbar — override certain defaults */
+.stop-expand > summary.stop-topbar {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  /* collapsed state: no border, no bottom gap */
+  border-bottom-color: transparent;
+  margin-bottom: 0;
+  transition: border-color 0.2s;
+}
+
+.stop-expand > summary.stop-topbar::-webkit-details-marker {
+  display: none;
+}
+
+/* When open: restore the dividing line and spacing */
+.stop-expand[open] > summary.stop-topbar {
+  border-bottom-color: var(--border);
+  margin-bottom: 1.75rem;
+}
+
+/* Hover hint on the topbar */
+.stop-expand > summary.stop-topbar:hover {
+  background: var(--surface-2);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Chevron icon */
+.stop-chevron {
+  margin-left: auto;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding-left: 0.6rem;
+}
+
+.stop-chevron svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.25s ease;
+}
+
+.stop-expand[open] .stop-chevron svg {
+  transform: rotate(180deg);
+}
+
+/* ════════════════════════════════════════════
    STOP SECTIONS
 ════════════════════════════════════════════ */
 .stop-sections {
@@ -656,6 +861,15 @@ details.day summary:hover {
     padding: 2.5rem 1rem;
   }
 
+  .glance-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .nz-map {
+    height: 300px;
+    position: static;
+  }
+
   .gr {
     grid-template-columns: 30px 92px 1fr;
     padding: 0.55rem 1rem;
@@ -668,5 +882,17 @@ details.day summary:hover {
 
   .gr-loc {
     font-size: 0.82rem;
+  }
+
+  .sn-link {
+    font-size: 0.7rem;
+    padding: 0.28rem 0.58rem;
+  }
+
+  .stop-expand > summary.stop-topbar:hover {
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }

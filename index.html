@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nicole &amp; Charlie's Honeymoon — New Zealand 2026</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -41,109 +42,120 @@
         <h2>At a Glance</h2>
         <p>20 nights &bull; November 6 &ndash; November 28, 2026</p>
       </div>
-      <div class="glance-table">
+      <div class="glance-layout">
 
-        <div class="gr gr--flight">
-          <span class="gr-n">Dep</span>
-          <span class="gr-date">Fri, Nov 6</span>
-          <span class="gr-loc">Depart New York City</span>
-          <span class="gr-hotel">JFK &rarr; Auckland</span>
-        </div>
-
-        <div class="gr gr--waiheke">
-          <span class="gr-n">N1</span>
-          <span class="gr-date">Sun, Nov 8</span>
-          <span class="gr-loc">Waiheke Island</span>
-          <span class="gr-hotel">Waiheke Island Resort</span>
-        </div>
-        <div class="gr gr--waiheke">
-          <span class="gr-n">N2</span>
-          <span class="gr-date">Mon, Nov 9</span>
-          <span class="gr-loc">Waiheke Island</span>
-          <span class="gr-hotel">Waiheke Island Resort</span>
-        </div>
-
-        <div class="gr gr--raglan">
-          <span class="gr-n">N3</span>
-          <span class="gr-date">Tue, Nov 10</span>
-          <span class="gr-loc">Raglan</span>
-          <span class="gr-hotel">Te Whaanga Retreat &amp; Spa</span>
-        </div>
-        <div class="gr gr--raglan">
-          <span class="gr-n">N4</span>
-          <span class="gr-date">Wed, Nov 11</span>
-          <span class="gr-loc">Raglan</span>
-          <span class="gr-hotel">Te Whaanga Retreat &amp; Spa</span>
-        </div>
-
-        <div class="gr gr--rotorua">
-          <span class="gr-n">N5</span>
-          <span class="gr-date">Thu, Nov 12</span>
-          <span class="gr-loc">Rotorua / Lake Rotoiti</span>
-          <span class="gr-hotel">VR Rotorua Lake Resort</span>
-        </div>
-
-        <div class="gr gr--qtown">
-          <span class="gr-n">N6</span>
-          <span class="gr-date">Fri, Nov 13</span>
-          <span class="gr-loc">Queenstown</span>
-          <span class="gr-hotel">Kamana Lakehouse</span>
-        </div>
-        <div class="gr gr--qtown">
-          <span class="gr-n">N7</span>
-          <span class="gr-date">Sat, Nov 14</span>
-          <span class="gr-loc">Queenstown</span>
-          <span class="gr-hotel">Kamana Lakehouse</span>
-        </div>
-        <div class="gr gr--qtown">
-          <span class="gr-n">N8</span>
-          <span class="gr-date">Sun, Nov 15</span>
-          <span class="gr-loc">Queenstown</span>
-          <span class="gr-hotel">Kamana Lakehouse</span>
-        </div>
-        <div class="gr gr--qtown">
-          <span class="gr-n">N9</span>
-          <span class="gr-date">Mon, Nov 16</span>
-          <span class="gr-loc">Queenstown</span>
-          <span class="gr-hotel">Kamana Lakehouse</span>
-        </div>
-        <div class="gr gr--qtown">
-          <span class="gr-n">N10</span>
-          <span class="gr-date">Tue, Nov 17</span>
-          <span class="gr-loc">Queenstown</span>
-          <span class="gr-hotel">Kamana Lakehouse</span>
-        </div>
-
-        <div class="gr gr--milford">
-          <span class="gr-n">N11</span>
-          <span class="gr-date">Wed, Nov 18</span>
-          <span class="gr-loc">Milford Sound</span>
-          <span class="gr-hotel">Overnight Cruise</span>
-        </div>
-
-        <div class="gr gr--manap">
-          <span class="gr-n">N12</span>
-          <span class="gr-date">Thu, Nov 19</span>
-          <span class="gr-loc">Manapouri</span>
-          <span class="gr-hotel">Cabot Lodge</span>
-        </div>
-        <div class="gr gr--manap">
-          <span class="gr-n">N13</span>
-          <span class="gr-date">Fri, Nov 20</span>
-          <span class="gr-loc">Manapouri</span>
-          <span class="gr-hotel">Cabot Lodge</span>
-        </div>
-
-        <div class="gr gr--tbd">
-          <span class="gr-n">N14&ndash;20</span>
-          <span class="gr-date">Sat, Nov 21+</span>
-          <span class="gr-loc">To be confirmed</span>
-          <span class="gr-hotel">7 nights TBD</span>
+        <div class="glance-table">
+          <a class="gr gr--flight" href="#nyc">
+            <span class="gr-n">Dep</span>
+            <span class="gr-date">Fri, Nov 6</span>
+            <span class="gr-loc">Depart New York City</span>
+            <span class="gr-hotel">JFK &rarr; Auckland</span>
+          </a>
+          <a class="gr gr--waiheke" href="#waiheke">
+            <span class="gr-n">N1</span>
+            <span class="gr-date">Sun, Nov 8</span>
+            <span class="gr-loc">Waiheke Island</span>
+            <span class="gr-hotel">Waiheke Island Resort</span>
+          </a>
+          <a class="gr gr--waiheke" href="#waiheke">
+            <span class="gr-n">N2</span>
+            <span class="gr-date">Mon, Nov 9</span>
+            <span class="gr-loc">Waiheke Island</span>
+            <span class="gr-hotel">Waiheke Island Resort</span>
+          </a>
+          <a class="gr gr--raglan" href="#raglan">
+            <span class="gr-n">N3</span>
+            <span class="gr-date">Tue, Nov 10</span>
+            <span class="gr-loc">Raglan</span>
+            <span class="gr-hotel">Te Whaanga Retreat &amp; Spa</span>
+          </a>
+          <a class="gr gr--raglan" href="#raglan">
+            <span class="gr-n">N4</span>
+            <span class="gr-date">Wed, Nov 11</span>
+            <span class="gr-loc">Raglan</span>
+            <span class="gr-hotel">Te Whaanga Retreat &amp; Spa</span>
+          </a>
+          <a class="gr gr--rotorua" href="#rotorua">
+            <span class="gr-n">N5</span>
+            <span class="gr-date">Thu, Nov 12</span>
+            <span class="gr-loc">Rotorua / Lake Rotoiti</span>
+            <span class="gr-hotel">VR Rotorua Lake Resort</span>
+          </a>
+          <a class="gr gr--qtown" href="#queenstown">
+            <span class="gr-n">N6</span>
+            <span class="gr-date">Fri, Nov 13</span>
+            <span class="gr-loc">Queenstown</span>
+            <span class="gr-hotel">Kamana Lakehouse</span>
+          </a>
+          <a class="gr gr--qtown" href="#queenstown">
+            <span class="gr-n">N7</span>
+            <span class="gr-date">Sat, Nov 14</span>
+            <span class="gr-loc">Queenstown</span>
+            <span class="gr-hotel">Kamana Lakehouse</span>
+          </a>
+          <a class="gr gr--qtown" href="#queenstown">
+            <span class="gr-n">N8</span>
+            <span class="gr-date">Sun, Nov 15</span>
+            <span class="gr-loc">Queenstown</span>
+            <span class="gr-hotel">Kamana Lakehouse</span>
+          </a>
+          <a class="gr gr--qtown" href="#queenstown">
+            <span class="gr-n">N9</span>
+            <span class="gr-date">Mon, Nov 16</span>
+            <span class="gr-loc">Queenstown</span>
+            <span class="gr-hotel">Kamana Lakehouse</span>
+          </a>
+          <a class="gr gr--qtown" href="#queenstown">
+            <span class="gr-n">N10</span>
+            <span class="gr-date">Tue, Nov 17</span>
+            <span class="gr-loc">Queenstown</span>
+            <span class="gr-hotel">Kamana Lakehouse</span>
+          </a>
+          <a class="gr gr--milford" href="#milford">
+            <span class="gr-n">N11</span>
+            <span class="gr-date">Wed, Nov 18</span>
+            <span class="gr-loc">Milford Sound</span>
+            <span class="gr-hotel">Overnight Cruise</span>
+          </a>
+          <a class="gr gr--manap" href="#manapouri">
+            <span class="gr-n">N12</span>
+            <span class="gr-date">Thu, Nov 19</span>
+            <span class="gr-loc">Manapouri</span>
+            <span class="gr-hotel">Cabot Lodge</span>
+          </a>
+          <a class="gr gr--manap" href="#manapouri">
+            <span class="gr-n">N13</span>
+            <span class="gr-date">Fri, Nov 20</span>
+            <span class="gr-loc">Manapouri</span>
+            <span class="gr-hotel">Cabot Lodge</span>
+          </a>
+          <a class="gr gr--tbd" href="#tbd">
+            <span class="gr-n">N14&ndash;20</span>
+            <span class="gr-date">Sat, Nov 21+</span>
+            <span class="gr-loc">To be confirmed</span>
+            <span class="gr-hotel">7 nights TBD</span>
+          </a>
         </div>
 
-      </div>
-    </div>
+        <div id="nz-map" class="nz-map"></div>
+
+      </div><!-- .glance-layout -->
+    </div><!-- .glance-inner -->
   </section>
+
+  <!-- ══════════════════════ STICKY NAV ══════════════════════ -->
+  <nav class="stop-nav" id="stop-nav" aria-label="Jump to stop">
+    <div class="stop-nav-inner">
+      <a class="sn-link sn-link--flight"  href="#nyc">NYC Departure</a>
+      <a class="sn-link sn-link--waiheke" href="#waiheke">Waiheke Island</a>
+      <a class="sn-link sn-link--raglan"  href="#raglan">Raglan</a>
+      <a class="sn-link sn-link--rotorua" href="#rotorua">Rotorua</a>
+      <a class="sn-link sn-link--qtown"   href="#queenstown">Queenstown</a>
+      <a class="sn-link sn-link--milford" href="#milford">Milford Sound</a>
+      <a class="sn-link sn-link--manap"   href="#manapouri">Manapouri</a>
+      <a class="sn-link sn-link--tbd"     href="#tbd">TBD</a>
+    </div>
+  </nav>
 
   <!-- ══════════════════════ ITINERARY ══════════════════════ -->
   <main>
@@ -165,20 +177,23 @@
           </div>
         </div>
         <div class="stop-body">
-          <div class="stop-topbar">
-            <span class="stop-dates">Friday, November 6, 2026</span>
-            <span class="stop-tag">Flight Day</span>
-          </div>
-          <div class="stop-sections">
-            <div class="ssec">
-              <h4>Travel Logistics</h4>
-              <div class="ssec-body placeholder-box"><p>Add your flight number, departure time, airline, layover details, and arrival info here.</p></div>
+          <details class="stop-expand">
+            <summary class="stop-topbar">
+              <span class="stop-dates">Friday, November 6, 2026</span>
+              <span class="stop-tag">Flight Day</span>
+              <span class="stop-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+            </summary>
+            <div class="stop-sections">
+              <div class="ssec">
+                <h4>Travel Logistics</h4>
+                <div class="ssec-body placeholder-box"><p>Add your flight number, departure time, airline, layover details, and arrival info here.</p></div>
+              </div>
+              <div class="ssec">
+                <h4>Notes &amp; Tips</h4>
+                <div class="ssec-body placeholder-box"><p>Packing reminders, airport lounge access, check-in times, what to do on the long-haul flight, etc.</p></div>
+              </div>
             </div>
-            <div class="ssec">
-              <h4>Notes &amp; Tips</h4>
-              <div class="ssec-body placeholder-box"><p>Packing reminders, airport lounge access, check-in times, what to do on the long-haul flight, etc.</p></div>
-            </div>
-          </div>
+          </details>
         </div>
       </article>
 
@@ -193,45 +208,48 @@
           </div>
         </div>
         <div class="stop-body">
-          <div class="stop-topbar">
-            <span class="stop-dates">Sun, Nov 8 &ndash; Tue, Nov 10</span>
-            <span class="stop-tag">2 Nights</span>
-          </div>
-          <div class="stop-sections">
-            <div class="ssec">
-              <h4>Travel Logistics</h4>
-              <div class="ssec-body placeholder-box"><p>Ferry from Auckland Britomart Pier (~35 min) or private helicopter transfer. Add flight arrival and ferry/transfer details here.</p></div>
-            </div>
-            <div class="ssec">
-              <h4>Activities</h4>
-              <div class="days-list">
-                <details class="day" open>
-                  <summary>Day 1 &mdash; Sun, Nov 8</summary>
-                  <div class="slots">
-                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                  </div>
-                </details>
-                <details class="day">
-                  <summary>Day 2 &mdash; Mon, Nov 9</summary>
-                  <div class="slots">
-                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                  </div>
-                </details>
+          <details class="stop-expand">
+            <summary class="stop-topbar">
+              <span class="stop-dates">Sun, Nov 8 &ndash; Tue, Nov 10</span>
+              <span class="stop-tag">2 Nights</span>
+              <span class="stop-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+            </summary>
+            <div class="stop-sections">
+              <div class="ssec">
+                <h4>Travel Logistics</h4>
+                <div class="ssec-body placeholder-box"><p>Ferry from Auckland Britomart Pier (~35 min) or private helicopter transfer. Add flight arrival and ferry/transfer details here.</p></div>
+              </div>
+              <div class="ssec">
+                <h4>Activities</h4>
+                <div class="days-list">
+                  <details class="day" open>
+                    <summary>Day 1 &mdash; Sun, Nov 8</summary>
+                    <div class="slots">
+                      <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    </div>
+                  </details>
+                  <details class="day">
+                    <summary>Day 2 &mdash; Mon, Nov 9</summary>
+                    <div class="slots">
+                      <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    </div>
+                  </details>
+                </div>
+              </div>
+              <div class="ssec">
+                <h4>Restaurants</h4>
+                <div class="ssec-body placeholder-box"><p>Add restaurant recommendations here.</p></div>
+              </div>
+              <div class="ssec">
+                <h4>Notes &amp; Tips</h4>
+                <div class="ssec-body placeholder-box"><p>Vineyard tours, beaches, ferry schedule, car hire on island, etc.</p></div>
               </div>
             </div>
-            <div class="ssec">
-              <h4>Restaurants</h4>
-              <div class="ssec-body placeholder-box"><p>Add restaurant recommendations here.</p></div>
-            </div>
-            <div class="ssec">
-              <h4>Notes &amp; Tips</h4>
-              <div class="ssec-body placeholder-box"><p>Vineyard tours, beaches, ferry schedule, car hire on island, etc.</p></div>
-            </div>
-          </div>
+          </details>
         </div>
       </article>
 
@@ -246,45 +264,48 @@
           </div>
         </div>
         <div class="stop-body">
-          <div class="stop-topbar">
-            <span class="stop-dates">Tue, Nov 10 &ndash; Thu, Nov 12</span>
-            <span class="stop-tag">2 Nights</span>
-          </div>
-          <div class="stop-sections">
-            <div class="ssec">
-              <h4>Travel Logistics</h4>
-              <div class="ssec-body placeholder-box"><p>Ferry back to Auckland, then drive ~2.5 hrs south via SH1 and SH23. Add rental car and transfer details here.</p></div>
-            </div>
-            <div class="ssec">
-              <h4>Activities</h4>
-              <div class="days-list">
-                <details class="day" open>
-                  <summary>Day 1 &mdash; Tue, Nov 10</summary>
-                  <div class="slots">
-                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                  </div>
-                </details>
-                <details class="day">
-                  <summary>Day 2 &mdash; Wed, Nov 11</summary>
-                  <div class="slots">
-                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                  </div>
-                </details>
+          <details class="stop-expand">
+            <summary class="stop-topbar">
+              <span class="stop-dates">Tue, Nov 10 &ndash; Thu, Nov 12</span>
+              <span class="stop-tag">2 Nights</span>
+              <span class="stop-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+            </summary>
+            <div class="stop-sections">
+              <div class="ssec">
+                <h4>Travel Logistics</h4>
+                <div class="ssec-body placeholder-box"><p>Ferry back to Auckland, then drive ~2.5 hrs south via SH1 and SH23. Add rental car and transfer details here.</p></div>
+              </div>
+              <div class="ssec">
+                <h4>Activities</h4>
+                <div class="days-list">
+                  <details class="day" open>
+                    <summary>Day 1 &mdash; Tue, Nov 10</summary>
+                    <div class="slots">
+                      <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    </div>
+                  </details>
+                  <details class="day">
+                    <summary>Day 2 &mdash; Wed, Nov 11</summary>
+                    <div class="slots">
+                      <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    </div>
+                  </details>
+                </div>
+              </div>
+              <div class="ssec">
+                <h4>Restaurants</h4>
+                <div class="ssec-body placeholder-box"><p>Add restaurant recommendations here.</p></div>
+              </div>
+              <div class="ssec">
+                <h4>Notes &amp; Tips</h4>
+                <div class="ssec-body placeholder-box"><p>Spa treatments, surf lessons, harbour views, Wainui Beach, etc.</p></div>
               </div>
             </div>
-            <div class="ssec">
-              <h4>Restaurants</h4>
-              <div class="ssec-body placeholder-box"><p>Add restaurant recommendations here.</p></div>
-            </div>
-            <div class="ssec">
-              <h4>Notes &amp; Tips</h4>
-              <div class="ssec-body placeholder-box"><p>Spa treatments, surf lessons, harbour views, Wainui Beach, etc.</p></div>
-            </div>
-          </div>
+          </details>
         </div>
       </article>
 
@@ -299,37 +320,40 @@
           </div>
         </div>
         <div class="stop-body">
-          <div class="stop-topbar">
-            <span class="stop-dates">Thu, Nov 12 &ndash; Fri, Nov 13</span>
-            <span class="stop-tag">1 Night</span>
-          </div>
-          <div class="stop-sections">
-            <div class="ssec">
-              <h4>Travel Logistics</h4>
-              <div class="ssec-body placeholder-box"><p>Drive from Raglan ~2.5 hrs east via SH1 and SH5. Add car hire and route details here.</p></div>
-            </div>
-            <div class="ssec">
-              <h4>Activities</h4>
-              <div class="days-list">
-                <details class="day" open>
-                  <summary>Day 1 &mdash; Thu, Nov 12</summary>
-                  <div class="slots">
-                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                  </div>
-                </details>
+          <details class="stop-expand">
+            <summary class="stop-topbar">
+              <span class="stop-dates">Thu, Nov 12 &ndash; Fri, Nov 13</span>
+              <span class="stop-tag">1 Night</span>
+              <span class="stop-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+            </summary>
+            <div class="stop-sections">
+              <div class="ssec">
+                <h4>Travel Logistics</h4>
+                <div class="ssec-body placeholder-box"><p>Drive from Raglan ~2.5 hrs east via SH1 and SH5. Add car hire and route details here.</p></div>
+              </div>
+              <div class="ssec">
+                <h4>Activities</h4>
+                <div class="days-list">
+                  <details class="day" open>
+                    <summary>Day 1 &mdash; Thu, Nov 12</summary>
+                    <div class="slots">
+                      <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    </div>
+                  </details>
+                </div>
+              </div>
+              <div class="ssec">
+                <h4>Restaurants</h4>
+                <div class="ssec-body placeholder-box"><p>Add restaurant recommendations here.</p></div>
+              </div>
+              <div class="ssec">
+                <h4>Notes &amp; Tips</h4>
+                <div class="ssec-body placeholder-box"><p>Geothermal pools, Maori cultural experiences, Te Puia, Polynesian Spa, Lake Rotoiti hot springs, etc.</p></div>
               </div>
             </div>
-            <div class="ssec">
-              <h4>Restaurants</h4>
-              <div class="ssec-body placeholder-box"><p>Add restaurant recommendations here.</p></div>
-            </div>
-            <div class="ssec">
-              <h4>Notes &amp; Tips</h4>
-              <div class="ssec-body placeholder-box"><p>Geothermal pools, Maori cultural experiences, Te Puia, Polynesian Spa, Lake Rotoiti hot springs, etc.</p></div>
-            </div>
-          </div>
+          </details>
         </div>
       </article>
 
@@ -344,69 +368,72 @@
           </div>
         </div>
         <div class="stop-body">
-          <div class="stop-topbar">
-            <span class="stop-dates">Fri, Nov 13 &ndash; Wed, Nov 18</span>
-            <span class="stop-tag">5 Nights</span>
-          </div>
-          <div class="stop-sections">
-            <div class="ssec">
-              <h4>Travel Logistics</h4>
-              <div class="ssec-body placeholder-box"><p>Flight from Rotorua (ROT) or Tauranga (TRG) to Queenstown (ZQN) ~1.5 hrs. Add flight and airport transfer details here.</p></div>
-            </div>
-            <div class="ssec">
-              <h4>Activities</h4>
-              <div class="days-list">
-                <details class="day" open>
-                  <summary>Day 1 &mdash; Fri, Nov 13</summary>
-                  <div class="slots">
-                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                  </div>
-                </details>
-                <details class="day">
-                  <summary>Day 2 &mdash; Sat, Nov 14</summary>
-                  <div class="slots">
-                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                  </div>
-                </details>
-                <details class="day">
-                  <summary>Day 3 &mdash; Sun, Nov 15</summary>
-                  <div class="slots">
-                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                  </div>
-                </details>
-                <details class="day">
-                  <summary>Day 4 &mdash; Mon, Nov 16</summary>
-                  <div class="slots">
-                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                  </div>
-                </details>
-                <details class="day">
-                  <summary>Day 5 &mdash; Tue, Nov 17</summary>
-                  <div class="slots">
-                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                  </div>
-                </details>
+          <details class="stop-expand">
+            <summary class="stop-topbar">
+              <span class="stop-dates">Fri, Nov 13 &ndash; Wed, Nov 18</span>
+              <span class="stop-tag">5 Nights</span>
+              <span class="stop-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+            </summary>
+            <div class="stop-sections">
+              <div class="ssec">
+                <h4>Travel Logistics</h4>
+                <div class="ssec-body placeholder-box"><p>Flight from Rotorua (ROT) or Tauranga (TRG) to Queenstown (ZQN) ~1.5 hrs. Add flight and airport transfer details here.</p></div>
+              </div>
+              <div class="ssec">
+                <h4>Activities</h4>
+                <div class="days-list">
+                  <details class="day" open>
+                    <summary>Day 1 &mdash; Fri, Nov 13</summary>
+                    <div class="slots">
+                      <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    </div>
+                  </details>
+                  <details class="day">
+                    <summary>Day 2 &mdash; Sat, Nov 14</summary>
+                    <div class="slots">
+                      <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    </div>
+                  </details>
+                  <details class="day">
+                    <summary>Day 3 &mdash; Sun, Nov 15</summary>
+                    <div class="slots">
+                      <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    </div>
+                  </details>
+                  <details class="day">
+                    <summary>Day 4 &mdash; Mon, Nov 16</summary>
+                    <div class="slots">
+                      <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    </div>
+                  </details>
+                  <details class="day">
+                    <summary>Day 5 &mdash; Tue, Nov 17</summary>
+                    <div class="slots">
+                      <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    </div>
+                  </details>
+                </div>
+              </div>
+              <div class="ssec">
+                <h4>Restaurants</h4>
+                <div class="ssec-body placeholder-box"><p>Add restaurant recommendations here.</p></div>
+              </div>
+              <div class="ssec">
+                <h4>Notes &amp; Tips</h4>
+                <div class="ssec-body placeholder-box"><p>Gondola &amp; Skyline, bungee jumping, AJ Hackett, wine tours, Glenorchy day trip, jet boating, etc.</p></div>
               </div>
             </div>
-            <div class="ssec">
-              <h4>Restaurants</h4>
-              <div class="ssec-body placeholder-box"><p>Add restaurant recommendations here.</p></div>
-            </div>
-            <div class="ssec">
-              <h4>Notes &amp; Tips</h4>
-              <div class="ssec-body placeholder-box"><p>Gondola &amp; Skyline, bungee jumping, AJ Hackett, wine tours, Glenorchy day trip, jet boating, etc.</p></div>
-            </div>
-          </div>
+          </details>
         </div>
       </article>
 
@@ -421,38 +448,41 @@
           </div>
         </div>
         <div class="stop-body">
-          <div class="stop-topbar">
-            <span class="stop-dates">Wed, Nov 18 &ndash; Thu, Nov 19</span>
-            <span class="stop-tag">1 Night Cruise</span>
-          </div>
-          <div class="stop-sections">
-            <div class="ssec">
-              <h4>Travel Logistics</h4>
-              <div class="ssec-body placeholder-box"><p>Drive from Queenstown ~4 hrs via SH6/SH94 (scenic), or scenic flight to Milford Sound. Add cruise operator, boarding time, and vessel details here.</p></div>
-            </div>
-            <div class="ssec">
-              <h4>Cruise Experience</h4>
-              <div class="days-list">
-                <details class="day" open>
-                  <summary>Aboard &mdash; Wed, Nov 18</summary>
-                  <div class="slots">
-                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Boarding, settling in, first cruise through the fiord...</p></div></div>
-                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Dinner on board, stargazing, kayaking options at dusk...</p></div></div>
-                  </div>
-                </details>
-                <details class="day">
-                  <summary>Disembark &mdash; Thu, Nov 19</summary>
-                  <div class="slots">
-                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Sunrise on the fiord, breakfast on board, departure time...</p></div></div>
-                  </div>
-                </details>
+          <details class="stop-expand">
+            <summary class="stop-topbar">
+              <span class="stop-dates">Wed, Nov 18 &ndash; Thu, Nov 19</span>
+              <span class="stop-tag">1 Night Cruise</span>
+              <span class="stop-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+            </summary>
+            <div class="stop-sections">
+              <div class="ssec">
+                <h4>Travel Logistics</h4>
+                <div class="ssec-body placeholder-box"><p>Drive from Queenstown ~4 hrs via SH6/SH94 (scenic), or scenic flight to Milford Sound. Add cruise operator, boarding time, and vessel details here.</p></div>
+              </div>
+              <div class="ssec">
+                <h4>Cruise Experience</h4>
+                <div class="days-list">
+                  <details class="day" open>
+                    <summary>Aboard &mdash; Wed, Nov 18</summary>
+                    <div class="slots">
+                      <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Boarding, settling in, first cruise through the fiord...</p></div></div>
+                      <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Dinner on board, stargazing, kayaking options at dusk...</p></div></div>
+                    </div>
+                  </details>
+                  <details class="day">
+                    <summary>Disembark &mdash; Thu, Nov 19</summary>
+                    <div class="slots">
+                      <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Sunrise on the fiord, breakfast on board, departure time...</p></div></div>
+                    </div>
+                  </details>
+                </div>
+              </div>
+              <div class="ssec">
+                <h4>Notes &amp; Tips</h4>
+                <div class="ssec-body placeholder-box"><p>Cruise operator details, what to pack, Mitre Peak, Stirling Falls, dolphins, fur seals, penguins, etc.</p></div>
               </div>
             </div>
-            <div class="ssec">
-              <h4>Notes &amp; Tips</h4>
-              <div class="ssec-body placeholder-box"><p>Cruise operator details, what to pack, Mitre Peak, Stirling Falls, dolphins, fur seals, penguins, etc.</p></div>
-            </div>
-          </div>
+          </details>
         </div>
       </article>
 
@@ -467,45 +497,48 @@
           </div>
         </div>
         <div class="stop-body">
-          <div class="stop-topbar">
-            <span class="stop-dates">Thu, Nov 19 &ndash; Sat, Nov 21</span>
-            <span class="stop-tag">2 Nights</span>
-          </div>
-          <div class="stop-sections">
-            <div class="ssec">
-              <h4>Travel Logistics</h4>
-              <div class="ssec-body placeholder-box"><p>From Milford Sound, drive ~1.5 hrs via Te Anau to Manapouri. Add transfer and check-in details here.</p></div>
-            </div>
-            <div class="ssec">
-              <h4>Activities</h4>
-              <div class="days-list">
-                <details class="day" open>
-                  <summary>Day 1 &mdash; Thu, Nov 19</summary>
-                  <div class="slots">
-                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                  </div>
-                </details>
-                <details class="day">
-                  <summary>Day 2 &mdash; Fri, Nov 20</summary>
-                  <div class="slots">
-                    <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                    <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
-                  </div>
-                </details>
+          <details class="stop-expand">
+            <summary class="stop-topbar">
+              <span class="stop-dates">Thu, Nov 19 &ndash; Sat, Nov 21</span>
+              <span class="stop-tag">2 Nights</span>
+              <span class="stop-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+            </summary>
+            <div class="stop-sections">
+              <div class="ssec">
+                <h4>Travel Logistics</h4>
+                <div class="ssec-body placeholder-box"><p>From Milford Sound, drive ~1.5 hrs via Te Anau to Manapouri. Add transfer and check-in details here.</p></div>
+              </div>
+              <div class="ssec">
+                <h4>Activities</h4>
+                <div class="days-list">
+                  <details class="day" open>
+                    <summary>Day 1 &mdash; Thu, Nov 19</summary>
+                    <div class="slots">
+                      <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    </div>
+                  </details>
+                  <details class="day">
+                    <summary>Day 2 &mdash; Fri, Nov 20</summary>
+                    <div class="slots">
+                      <div class="slot"><span class="slot-time">Morning</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Afternoon</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                      <div class="slot"><span class="slot-time">Evening</span><div class="slot-body placeholder-box"><p>Add plans...</p></div></div>
+                    </div>
+                  </details>
+                </div>
+              </div>
+              <div class="ssec">
+                <h4>Restaurants</h4>
+                <div class="ssec-body placeholder-box"><p>Add dining options at Cabot Lodge and nearby Te Anau here.</p></div>
+              </div>
+              <div class="ssec">
+                <h4>Notes &amp; Tips</h4>
+                <div class="ssec-body placeholder-box"><p>Doubtful Sound day trip, kayaking on Lake Manapouri, remote wilderness walks, stargazing, etc.</p></div>
               </div>
             </div>
-            <div class="ssec">
-              <h4>Restaurants</h4>
-              <div class="ssec-body placeholder-box"><p>Add dining options at Cabot Lodge and nearby Te Anau here.</p></div>
-            </div>
-            <div class="ssec">
-              <h4>Notes &amp; Tips</h4>
-              <div class="ssec-body placeholder-box"><p>Doubtful Sound day trip, kayaking on Lake Manapouri, remote wilderness walks, stargazing, etc.</p></div>
-            </div>
-          </div>
+          </details>
         </div>
       </article>
 
@@ -519,17 +552,20 @@
           </div>
         </div>
         <div class="stop-body">
-          <div class="stop-topbar">
-            <span class="stop-dates">Sat, Nov 21 &ndash; Sat, Nov 28</span>
-            <span class="stop-tag">7 Nights TBD</span>
-          </div>
-          <div class="stop-sections">
-            <div class="ssec">
-              <div class="tbd-placeholder">
-                <p>This chapter of the adventure is still being written. Check back soon!</p>
+          <details class="stop-expand">
+            <summary class="stop-topbar">
+              <span class="stop-dates">Sat, Nov 21 &ndash; Sat, Nov 28</span>
+              <span class="stop-tag">7 Nights TBD</span>
+              <span class="stop-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+            </summary>
+            <div class="stop-sections">
+              <div class="ssec">
+                <div class="tbd-placeholder">
+                  <p>This chapter of the adventure is still being written. Check back soon!</p>
+                </div>
               </div>
             </div>
-          </div>
+          </details>
         </div>
       </article>
 
@@ -540,6 +576,7 @@
     <p>Nicole &amp; Charlie &bull; November 2026 &bull; New Zealand</p>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
