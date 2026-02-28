@@ -67,7 +67,7 @@ body {
   animation-delay: -1s;
 }
 .hero-photo--2 {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Queenstown_and_Lake_Wakatipu.JPG/1400px-Queenstown_and_Lake_Wakatipu.JPG');
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/View_from_lookout_over_Queenstown_towards_the_Remarkables_in_spring.jpg/1400px-View_from_lookout_over_Queenstown_towards_the_Remarkables_in_spring.jpg');
   animation-delay: 4s;
 }
 .hero-photo--3 {
@@ -579,8 +579,8 @@ a.gr:hover .gr-loc {
 }
 
 .stop-visual--queenstown {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Queenstown_and_Lake_Wakatipu.JPG/1400px-Queenstown_and_Lake_Wakatipu.JPG');
-  background-color: #08152a;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/View_from_lookout_over_Queenstown_towards_the_Remarkables_in_spring.jpg/1400px-View_from_lookout_over_Queenstown_towards_the_Remarkables_in_spring.jpg');
+  background-color: #1a2e1a;
 }
 
 .stop-visual--milford {
