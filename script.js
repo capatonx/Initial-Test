@@ -38,6 +38,22 @@ const STOPS = [
   { id: 'manapouri',  name: 'Manapouri',             latlng: [-45.543, 167.598], color: '#50b050', hotel: 'Cabot Lodge',                 dates: 'Nov 19 – 21' },
 ];
 
+/* Build a Google-Maps-style teardrop pin as a Leaflet divIcon */
+function makePin(color) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 36" width="28" height="42">
+    <path d="M12 0C7.3 0 0 5.4 0 12.2 0 19.5 12 36 12 36S24 19.5 24 12.2C24 5.4 16.7 0 12 0z"
+          fill="${color}" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+    <circle cx="12" cy="12" r="4.8" fill="rgba(255,255,255,0.45)"/>
+  </svg>`;
+  return L.divIcon({
+    className: 'map-pin-icon',
+    html: svg,
+    iconSize:    [28, 42],
+    iconAnchor:  [14, 42],
+    popupAnchor: [0, -44],
+  });
+}
+
 const mapEl = document.getElementById('nz-map');
 if (mapEl) {
   const map = L.map('nz-map', {
@@ -45,11 +61,11 @@ if (mapEl) {
     zoomControl: true,
   });
 
-  // OpenTopoMap – blue ocean, green lowlands, white snow-capped peaks (Southern Alps)
-  L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://opentopomap.org">OpenTopoMap</a>',
-    subdomains: 'abc',
-    maxZoom: 17,
+  // CartoDB Voyager – teal ocean, green/white land, close to Google Maps palette
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19,
   }).addTo(map);
 
   const bounds = [];
@@ -57,19 +73,12 @@ if (mapEl) {
   STOPS.forEach((stop, i) => {
     bounds.push(stop.latlng);
 
-    const marker = L.circleMarker(stop.latlng, {
-      radius: 9,
-      fillColor: stop.color,
-      color: 'rgba(255,255,255,0.85)',
-      weight: 2,
-      opacity: 1,
-      fillOpacity: 0.92,
-    }).addTo(map);
+    const marker = L.marker(stop.latlng, { icon: makePin(stop.color) }).addTo(map);
 
     marker.bindTooltip(`<strong>${i + 1}. ${stop.name}</strong>`, {
       permanent: false,
       direction: 'top',
-      offset: [0, -10],
+      offset: [0, -44],
     });
 
     marker.bindPopup(

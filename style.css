@@ -315,6 +315,13 @@ a.gr:hover .gr-loc {
   top: 52px;
 }
 
+/* Strip Leaflet's default white box from custom pin icons */
+.map-pin-icon {
+  background: none !important;
+  border: none !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
 /* Leaflet popup dark-theme overrides */
 .leaflet-popup-content-wrapper {
   background: var(--surface-2);
