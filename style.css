@@ -168,26 +168,15 @@ body {
   border-color: #383530;
 }
 
-/* ── Stop visual (gradient hero image) ── */
+/* ── Stop visual (photo background) ── */
 .stop-visual {
   position: relative;
   height: 230px;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-}
-
-/* Subtle decorative orb */
-.stop-visual::before {
-  content: '';
-  position: absolute;
-  top: -30px;
-  right: -30px;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  opacity: 0.28;
-  pointer-events: none;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Dark gradient overlay so text is always readable */
@@ -229,62 +218,71 @@ body {
   color: rgba(255, 255, 255, 0.65);
 }
 
-/* ── Per-stop gradient themes ── */
-.stop-visual--nyc {
-  background: linear-gradient(155deg, #070c18 0%, #101828 35%, #1e2f55 65%, #0b1222 100%);
+.stop-address {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  margin-top: 0.55rem;
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  line-height: 1;
+  transition: color 0.2s;
 }
-.stop-visual--nyc::before {
-  background: radial-gradient(circle, rgba(100,140,255,1) 0%, transparent 70%);
+
+.stop-address::before {
+  content: '';
+  display: inline-block;
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+}
+
+.stop-address:hover {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* ── Per-stop photo backgrounds ── */
+.stop-visual--nyc {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Aerial_view_of_JFK_Terminal_8_from_the_southwest_01_(9456620628).jpg/1400px-Aerial_view_of_JFK_Terminal_8_from_the_southwest_01_(9456620628).jpg');
+  background-color: #1a2040;
 }
 
 .stop-visual--waiheke {
-  background: linear-gradient(155deg, #1c4a6e 0%, #3585b0 25%, #b89050 55%, #7a4a10 80%, #2e1205 100%);
-}
-.stop-visual--waiheke::before {
-  background: radial-gradient(circle, rgba(210,155,60,1) 0%, transparent 70%);
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Waiheke_Island_Vineyard.jpg/1400px-Waiheke_Island_Vineyard.jpg');
+  background-color: #4a3010;
 }
 
 .stop-visual--raglan {
-  background: linear-gradient(155deg, #002d45 0%, #006090 32%, #00a8cc 60%, #00486e 85%, #001828 100%);
-}
-.stop-visual--raglan::before {
-  background: radial-gradient(circle, rgba(0,185,230,1) 0%, transparent 70%);
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Mt._Karioi,_Raglan_and_Whaingaroa_Harbour.jpg/1400px-Mt._Karioi,_Raglan_and_Whaingaroa_Harbour.jpg');
+  background-position: center 70%;
+  background-color: #003d5b;
 }
 
 .stop-visual--rotorua {
-  background: linear-gradient(155deg, #142810 0%, #305c10 25%, #a89028 50%, #7a3200 75%, #280e00 100%);
-}
-.stop-visual--rotorua::before {
-  background: radial-gradient(circle, rgba(190,185,60,1) 0%, transparent 70%);
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Lake_Rotoiti,_New_Zealand_(1).JPG/1400px-Lake_Rotoiti,_New_Zealand_(1).JPG');
+  background-color: #1a3318;
 }
 
 .stop-visual--queenstown {
-  background: linear-gradient(155deg, #08152a 0%, #163458 28%, #2460920 52%, #508535 72%, #182a10 100%);
-  background: linear-gradient(155deg, #08152a 0%, #163458 28%, #246092 52%, #508535 72%, #182a10 100%);
-}
-.stop-visual--queenstown::before {
-  background: radial-gradient(circle, rgba(55,150,220,1) 0%, transparent 70%);
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Queenstown_and_Lake_Wakatipu.JPG/1400px-Queenstown_and_Lake_Wakatipu.JPG');
+  background-color: #08152a;
 }
 
 .stop-visual--milford {
-  background: linear-gradient(155deg, #030a10 0%, #081a28 28%, #0a3020 55%, #051008 80%, #020608 100%);
-}
-.stop-visual--milford::before {
-  background: radial-gradient(circle, rgba(0,120,100,1) 0%, transparent 70%);
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Milford_Sound_(New_Zealand).JPG/1400px-Milford_Sound_(New_Zealand).JPG');
+  background-color: #040d12;
 }
 
 .stop-visual--manapouri {
-  background: linear-gradient(155deg, #040c04 0%, #0c220c 28%, #185018 55%, #246824 75%, #081408 100%);
-}
-.stop-visual--manapouri::before {
-  background: radial-gradient(circle, rgba(30,160,60,1) 0%, transparent 70%);
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg/1400px-Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg');
+  background-color: #050f05;
 }
 
 .stop-visual--tbd {
   background: linear-gradient(155deg, #0e0c18 0%, #181628 50%, #0e0c18 100%);
-}
-.stop-visual--tbd::before {
-  background: radial-gradient(circle, rgba(110,90,180,1) 0%, transparent 70%);
 }
 
 /* ════════════════════════════════════════════
