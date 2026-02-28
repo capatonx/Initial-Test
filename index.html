@@ -4,6 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nicole &amp; Charlie's Honeymoon — New Zealand 2026</title>
+  <meta name="description" content="Nicole &amp; Charlie's honeymoon itinerary — 20 nights across New Zealand, November 2026. Waiheke Island, Raglan, Queenstown, Milford Sound, Manapouri, and more." />
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:title"       content="Nicole &amp; Charlie's Honeymoon — New Zealand 2026" />
+  <meta property="og:description" content="20 nights across New Zealand: Waiheke Island, Raglan, Queenstown, Milford Sound, Manapouri, and more. November 2026." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:image"       content="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Milford_Sound_(New_Zealand).JPG/1200px-Milford_Sound_(New_Zealand).JPG" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>" />
+
+  <!-- Preconnect to external origins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="preconnect" href="https://basemaps.cartocdn.com" crossorigin />
+  <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin />
+
+  <!-- Google Font: Inter for consistent cross-platform typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -164,6 +186,7 @@
       <header class="section-header">
         <h2>The Full Itinerary</h2>
         <p>13 nights confirmed &bull; 7 nights TBD &bull; New Zealand</p>
+        <button class="toggle-all-btn" id="toggle-all">Expand All</button>
       </header>
 
       <!-- ─── NYC DEPARTURE ─── -->
@@ -575,6 +598,12 @@
   <footer class="site-footer">
     <p>Nicole &amp; Charlie &bull; November 2026 &bull; New Zealand</p>
   </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="script.js"></script>

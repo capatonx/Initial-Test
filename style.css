@@ -16,7 +16,7 @@
   --text-muted:      #7a7268;
   --text-placeholder:#3e3c39;
   --radius:          16px;
-  --font:            'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font:            'Inter', system-ui, -apple-system, sans-serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -906,4 +906,180 @@ details.day summary:hover {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
+}
+
+/* ════════════════════════════════════════════
+   EXPAND / COLLAPSE ALL BUTTON
+════════════════════════════════════════════ */
+.toggle-all-btn {
+  margin-top: 0.9rem;
+  font-size: 0.73rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  padding: 0.32rem 1rem;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  font-family: var(--font);
+}
+
+.toggle-all-btn:hover {
+  color: var(--text);
+  border-color: #3e3c39;
+  background: var(--surface-2);
+}
+
+/* ════════════════════════════════════════════
+   SCROLL-TO-TOP BUTTON
+════════════════════════════════════════════ */
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 300;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.25s, transform 0.25s, background 0.15s, color 0.15s;
+  pointer-events: none;
+}
+
+.scroll-top.is-visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.scroll-top:hover {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.scroll-top svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ════════════════════════════════════════════
+   PRINT STYLESHEET
+════════════════════════════════════════════ */
+@media print {
+  /* Hide everything except the itinerary */
+  .hero,
+  .glance-section,
+  .stop-nav,
+  .scroll-top,
+  .toggle-all-btn,
+  .site-footer,
+  .stop-address::before {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #111;
+    font-size: 11pt;
+  }
+
+  .itinerary-wrap {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-header h2,
+  .section-header p {
+    color: #111;
+  }
+
+  /* Force all <details> to show content when printed */
+  details > *:not(summary) {
+    display: block !important;
+  }
+
+  .stop {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 1.2rem;
+    break-inside: avoid;
+    background: #fff;
+  }
+
+  .stop-visual {
+    height: 80px;
+    background-image: none !important;
+    background-color: #f0f0f0 !important;
+  }
+
+  .stop-visual::after { display: none; }
+
+  .stop-visual-inner h3 { color: #111; font-size: 1.1rem; }
+  .stop-num            { color: #555; }
+  .stop-address        { color: #555; }
+
+  .stop-body { padding: 0.75rem 1rem; }
+
+  .stop-topbar {
+    border-bottom-color: #ddd;
+    margin-bottom: 0.75rem;
+  }
+
+  .stop-expand > summary.stop-topbar {
+    border-bottom-color: #ddd !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .stop-chevron { display: none; }
+  .stop-dates   { color: #555; font-size: 0.85rem; }
+  .stop-tag     { color: #333; background: #f0f0f0; border-color: #ccc; }
+
+  .ssec h4 { color: #555; }
+
+  .placeholder-box {
+    background: #f9f9f9;
+    border: 1px dashed #ccc;
+  }
+
+  .placeholder-box p { color: #888; }
+
+  details.day {
+    border-color: #ddd;
+    break-inside: avoid;
+  }
+
+  details.day summary {
+    background: #f5f5f5;
+    color: #333;
+  }
+
+  .slots { background: #fff; }
+  .slot-time { color: #555; }
+
+  .tbd-placeholder {
+    background: #f9f9f9;
+    border-color: #ccc;
+  }
+
+  .tbd-placeholder p { color: #888; }
 }

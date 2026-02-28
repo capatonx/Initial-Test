@@ -30,29 +30,37 @@ setInterval(updateCountdown, 1000);
 
 /* ── Leaflet map ── */
 const STOPS = [
-  { id: 'waiheke',    name: 'Waiheke Island',      latlng: [-36.788, 175.085], color: '#c4903a', hotel: 'Waiheke Island Resort',      dates: 'Nov 8 – 10' },
-  { id: 'raglan',     name: 'Raglan',               latlng: [-37.805, 174.874], color: '#2aa0c8', hotel: 'Te Whaanga Retreat & Spa',    dates: 'Nov 10 – 12' },
-  { id: 'rotorua',    name: 'Rotorua / Lake Rotoiti', latlng: [-38.037, 176.370], color: '#58b458', hotel: 'VR Rotorua Lake Resort',      dates: 'Nov 12 – 13' },
-  { id: 'queenstown', name: 'Queenstown',            latlng: [-45.031, 168.663], color: '#4088c8', hotel: 'Kamana Lakehouse',            dates: 'Nov 13 – 18' },
-  { id: 'milford',    name: 'Milford Sound',         latlng: [-44.655, 167.927], color: '#28a898', hotel: 'Overnight Cruise',            dates: 'Nov 18 – 19' },
-  { id: 'manapouri',  name: 'Manapouri',             latlng: [-45.543, 167.598], color: '#50b050', hotel: 'Cabot Lodge',                 dates: 'Nov 19 – 21' },
+  { id: 'waiheke',    name: 'Waiheke Island',         latlng: [-36.788, 175.085], color: '#c4903a', hotel: 'Waiheke Island Resort',      dates: 'Nov 8 – 10' },
+  { id: 'raglan',     name: 'Raglan',                  latlng: [-37.805, 174.874], color: '#2aa0c8', hotel: 'Te Whaanga Retreat & Spa',    dates: 'Nov 10 – 12' },
+  { id: 'rotorua',    name: 'Rotorua / Lake Rotoiti',  latlng: [-38.037, 176.370], color: '#58b458', hotel: 'VR Rotorua Lake Resort',      dates: 'Nov 12 – 13' },
+  { id: 'queenstown', name: 'Queenstown',               latlng: [-45.031, 168.663], color: '#4088c8', hotel: 'Kamana Lakehouse',            dates: 'Nov 13 – 18' },
+  { id: 'milford',    name: 'Milford Sound',            latlng: [-44.655, 167.927], color: '#28a898', hotel: 'Overnight Cruise',            dates: 'Nov 18 – 19' },
+  { id: 'manapouri',  name: 'Manapouri',                latlng: [-45.543, 167.598], color: '#50b050', hotel: 'Cabot Lodge',                 dates: 'Nov 19 – 21' },
 ];
 
-/* Build a Google-Maps-style teardrop pin as a Leaflet divIcon */
-function makePin(color) {
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 36" width="28" height="42">
+/* Build a numbered teardrop pin; active = slightly larger with brighter stroke */
+function makePin(color, num, active = false) {
+  const w = active ? 34 : 28;
+  const h = active ? 51 : 42;
+  const stroke = active ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.7)';
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 36" width="${w}" height="${h}">
     <path d="M12 0C7.3 0 0 5.4 0 12.2 0 19.5 12 36 12 36S24 19.5 24 12.2C24 5.4 16.7 0 12 0z"
-          fill="${color}" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
-    <circle cx="12" cy="12" r="4.8" fill="rgba(255,255,255,0.45)"/>
+          fill="${color}" stroke="${stroke}" stroke-width="1.5"/>
+    <circle cx="12" cy="12" r="4.8" fill="rgba(255,255,255,0.35)"/>
+    <text x="12" y="15.5" text-anchor="middle" font-size="8.5" font-weight="700"
+          fill="white" font-family="system-ui,sans-serif" opacity="0.9">${num}</text>
   </svg>`;
   return L.divIcon({
     className: 'map-pin-icon',
     html: svg,
-    iconSize:    [28, 42],
-    iconAnchor:  [14, 42],
-    popupAnchor: [0, -44],
+    iconSize:   [w, h],
+    iconAnchor: [w / 2, h],
+    popupAnchor:[0, -(h + 2)],
   });
 }
+
+/* Registry shared between map and scroll observer */
+const markerRegistry = {};  // stopId → { marker, stop, idx }
 
 const mapEl = document.getElementById('nz-map');
 if (mapEl) {
@@ -68,12 +76,19 @@ if (mapEl) {
     maxZoom: 19,
   }).addTo(map);
 
+  // Dashed route polyline connecting stops in travel order
+  L.polyline(STOPS.map(s => s.latlng), {
+    color: 'rgba(200,169,110,0.55)',
+    weight: 2,
+    dashArray: '4 8',
+  }).addTo(map);
+
   const bounds = [];
 
   STOPS.forEach((stop, i) => {
     bounds.push(stop.latlng);
 
-    const marker = L.marker(stop.latlng, { icon: makePin(stop.color) }).addTo(map);
+    const marker = L.marker(stop.latlng, { icon: makePin(stop.color, i + 1) }).addTo(map);
 
     marker.bindTooltip(`<strong>${i + 1}. ${stop.name}</strong>`, {
       permanent: false,
@@ -81,25 +96,16 @@ if (mapEl) {
       offset: [0, -44],
     });
 
-    marker.bindPopup(
-      `<div class="map-popup">
-        <strong>${stop.name}</strong>
-        <span>${stop.hotel}</span>
-        <span>${stop.dates}</span>
-        <a href="#${stop.id}">View details ↓</a>
-      </div>`,
-      { maxWidth: 180 }
-    );
-
+    // Click scrolls directly to the stop card (no popup needed — card has all the detail)
     marker.on('click', () => {
       const target = document.getElementById(stop.id);
-      if (target) {
-        // Auto-expand the stop when navigated to from the map
-        const details = target.querySelector('.stop-expand');
-        if (details) details.open = true;
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      if (!target) return;
+      const details = target.querySelector('.stop-expand');
+      if (details) details.open = true;
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
+
+    markerRegistry[stop.id] = { marker, stop, idx: i };
   });
 
   map.fitBounds(bounds, { padding: [30, 30] });
@@ -113,15 +119,21 @@ const stopEls  = document.querySelectorAll('.stop[id]');
 if (stopEls.length && navLinks.length) {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.id;
-        navLinks.forEach(link => {
-          link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
-        });
-      }
+      if (!entry.isIntersecting) return;
+      const id = entry.target.id;
+
+      // Highlight nav link
+      navLinks.forEach(link => {
+        link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
+      });
+
+      // Pulse the corresponding map pin (enlarge + brighten stroke)
+      Object.keys(markerRegistry).forEach(sid => {
+        const { marker, stop, idx } = markerRegistry[sid];
+        marker.setIcon(makePin(stop.color, idx + 1, sid === id));
+      });
     });
   }, {
-    // Trigger when the top of the stop card enters the upper 30% of the viewport
     rootMargin: '-8% 0px -65% 0px',
     threshold: 0,
   });
@@ -151,3 +163,27 @@ document.querySelectorAll('a.gr').forEach(row => {
     expandStop(id);
   });
 });
+
+
+/* ── Expand / Collapse all stop cards ── */
+const toggleAllBtn = document.getElementById('toggle-all');
+if (toggleAllBtn) {
+  let expanded = false;
+  toggleAllBtn.addEventListener('click', () => {
+    expanded = !expanded;
+    document.querySelectorAll('.stop-expand').forEach(d => { d.open = expanded; });
+    toggleAllBtn.textContent = expanded ? 'Collapse All' : 'Expand All';
+  });
+}
+
+
+/* ── Scroll-to-top button ── */
+const scrollTopBtn = document.getElementById('scroll-top');
+if (scrollTopBtn) {
+  window.addEventListener('scroll', () => {
+    scrollTopBtn.classList.toggle('is-visible', window.scrollY > 500);
+  }, { passive: true });
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
