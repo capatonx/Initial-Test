@@ -72,6 +72,11 @@ body {
   object-fit: cover;
   object-position: center;
   display: block;
+  /* If the image fails to load, hide alt text & broken-image indicators.
+     The parent .hero-photo already starts at opacity:0 and uses the
+     heroSlide animation, so a broken image is invisible. */
+  color: transparent;
+  font-size: 0;
 }
 
 .hero-photo--1 { animation-delay: -1s; }
@@ -1068,6 +1073,29 @@ details.day summary:hover {
     margin-right: -1.25rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  /* ── Mobile-optimised stop photos: 900px instead of 1400px ── */
+  .stop-visual--nyc {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg/900px-New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg');
+  }
+  .stop-visual--waiheke {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Waiheke_Island_Vineyard.jpg/900px-Waiheke_Island_Vineyard.jpg');
+  }
+  .stop-visual--raglan {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Mt._Karioi,_Raglan_and_Whaingaroa_Harbour.jpg/900px-Mt._Karioi,_Raglan_and_Whaingaroa_Harbour.jpg');
+  }
+  .stop-visual--rotorua {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Lake_Rotoiti,_New_Zealand_(1).JPG/900px-Lake_Rotoiti,_New_Zealand_(1).JPG');
+  }
+  .stop-visual--queenstown {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/View_from_Ben_Lomond_over_Lake_Wakatipu_towards_the_Remarkables_in_spring.jpg/900px-View_from_Ben_Lomond_over_Lake_Wakatipu_towards_the_Remarkables_in_spring.jpg');
+  }
+  .stop-visual--milford {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Milford_Sound_(New_Zealand).JPG/900px-Milford_Sound_(New_Zealand).JPG');
+  }
+  .stop-visual--manapouri {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg/900px-Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg');
   }
 }
 
