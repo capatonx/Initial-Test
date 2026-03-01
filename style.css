@@ -711,8 +711,9 @@ a.gr:hover .gr-loc {
 
 /* ── Per-stop photo backgrounds ── */
 .stop-visual--nyc {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Aerial_view_of_JFK_Terminal_8_from_the_southwest_01_(9456620628).jpg/1400px-Aerial_view_of_JFK_Terminal_8_from_the_southwest_01_(9456620628).jpg');
-  background-color: #1a2040;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg/1400px-New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg');
+  background-color: #080c18;
+  background-position: center 60%;
 }
 
 .stop-visual--waiheke {
