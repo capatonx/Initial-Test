@@ -22,8 +22,8 @@
   <link rel="preconnect" href="https://unpkg.com" />
   <link rel="preconnect" href="https://basemaps.cartocdn.com" crossorigin />
   <link rel="preconnect" href="https://upload.wikimedia.org" />
-  <!-- Preload the first carousel frame (900px — the size served to mobile/tablet) -->
-  <link rel="preload" as="image" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Milford_Sound_(New_Zealand).JPG/900px-Milford_Sound_(New_Zealand).JPG" />
+  <!-- Preload the first carousel frame (1200px — confirmed pre-cached Wikimedia size) -->
+  <link rel="preload" as="image" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Milford_Sound_(New_Zealand).JPG/1200px-Milford_Sound_(New_Zealand).JPG" />
 
   <!-- Google Font: Inter for consistent cross-platform typography -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -36,28 +36,29 @@
   <!-- ══════════════════════ HERO ══════════════════════ -->
   <header class="hero">
     <div class="hero-photos" aria-hidden="true">
-      <!-- srcset serves 900px to mobile (≈150-300 KB) and 1400px to desktop (≈400-800 KB). -->
+      <!-- 1200w = pre-cached Wikimedia size (confirmed via og:image); 1400w = desktop.
+           Mobile browsers (≤750px effective width) pick 1200w; desktop picks 1400w. -->
       <div class="hero-photo hero-photo--1">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Milford_Sound_(New_Zealand).JPG/900px-Milford_Sound_(New_Zealand).JPG"
-             srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Milford_Sound_(New_Zealand).JPG/900px-Milford_Sound_(New_Zealand).JPG 900w,
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Milford_Sound_(New_Zealand).JPG/1200px-Milford_Sound_(New_Zealand).JPG"
+             srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Milford_Sound_(New_Zealand).JPG/1200px-Milford_Sound_(New_Zealand).JPG 1200w,
                      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Milford_Sound_(New_Zealand).JPG/1400px-Milford_Sound_(New_Zealand).JPG 1400w"
              sizes="100vw" alt="" fetchpriority="high" decoding="async">
       </div>
       <div class="hero-photo hero-photo--2">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/View_from_Ben_Lomond_over_Lake_Wakatipu_towards_the_Remarkables_in_spring.jpg/900px-View_from_Ben_Lomond_over_Lake_Wakatipu_towards_the_Remarkables_in_spring.jpg"
-             srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/View_from_Ben_Lomond_over_Lake_Wakatipu_towards_the_Remarkables_in_spring.jpg/900px-View_from_Ben_Lomond_over_Lake_Wakatipu_towards_the_Remarkables_in_spring.jpg 900w,
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/View_from_Ben_Lomond_over_Lake_Wakatipu_towards_the_Remarkables_in_spring.jpg/1200px-View_from_Ben_Lomond_over_Lake_Wakatipu_towards_the_Remarkables_in_spring.jpg"
+             srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/View_from_Ben_Lomond_over_Lake_Wakatipu_towards_the_Remarkables_in_spring.jpg/1200px-View_from_Ben_Lomond_over_Lake_Wakatipu_towards_the_Remarkables_in_spring.jpg 1200w,
                      https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/View_from_Ben_Lomond_over_Lake_Wakatipu_towards_the_Remarkables_in_spring.jpg/1400px-View_from_Ben_Lomond_over_Lake_Wakatipu_towards_the_Remarkables_in_spring.jpg 1400w"
              sizes="100vw" alt="" decoding="async">
       </div>
       <div class="hero-photo hero-photo--3">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg/900px-Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg"
-             srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg/900px-Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg 900w,
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg/1200px-Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg"
+             srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg/1200px-Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg 1200w,
                      https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg/1400px-Shore_of_Lake_Manapouri_with_Mt_Titiroa_in_the_background.jpg 1400w"
              sizes="100vw" alt="" decoding="async">
       </div>
       <div class="hero-photo hero-photo--4">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Waiheke_Island_Vineyard.jpg/900px-Waiheke_Island_Vineyard.jpg"
-             srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Waiheke_Island_Vineyard.jpg/900px-Waiheke_Island_Vineyard.jpg 900w,
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Waiheke_Island_Vineyard.jpg/1200px-Waiheke_Island_Vineyard.jpg"
+             srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Waiheke_Island_Vineyard.jpg/1200px-Waiheke_Island_Vineyard.jpg 1200w,
                      https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Waiheke_Island_Vineyard.jpg/1400px-Waiheke_Island_Vineyard.jpg 1400w"
              sizes="100vw" alt="" decoding="async">
       </div>

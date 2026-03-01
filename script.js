@@ -1,3 +1,16 @@
+/* ── Hero carousel: hide broken-image indicators without removing elements ──
+   Uses visibility:hidden (not display:none) so the DOM element stays intact
+   and the opacity animation continues to run on the parent .hero-photo.      */
+document.querySelectorAll('.hero-photo img').forEach(img => {
+  img.addEventListener('error', function () {
+    this.style.visibility = 'hidden';
+  });
+  img.addEventListener('load', function () {
+    this.style.visibility = '';
+  });
+});
+
+
 /* ── Countdown ── */
 const TARGET = new Date('2026-11-06T00:00:00');
 
