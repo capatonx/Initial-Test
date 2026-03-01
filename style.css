@@ -59,7 +59,9 @@ body {
   opacity: 0;
   animation: heroSlide 20s infinite;
   animation-fill-mode: backwards;
-  will-change: opacity, transform;
+  /* NOTE: no will-change here — pre-promoting 4 full-viewport layers on mobile
+     exhausts iOS GPU memory and causes them to render as solid black.
+     will-change is restored for desktop-only in the media query below. */
   overflow: hidden; /* clip the img to the frame */
 }
 
@@ -77,12 +79,28 @@ body {
 .hero-photo--3 { animation-delay:  9s; }
 .hero-photo--4 { animation-delay: 14s; }
 
+/* Mobile: opacity-only fade — no transform means no per-photo GPU composite layer */
 @keyframes heroSlide {
-  0%   { opacity: 0; transform: scale(1.0); }
-  5%   { opacity: 1; transform: scale(1.02); }
-  25%  { opacity: 1; transform: scale(1.08); }
-  30%  { opacity: 0; transform: scale(1.09); }
-  100% { opacity: 0; transform: scale(1.0); }
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }
+  25%  { opacity: 1; }
+  30%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Desktop: restore Ken Burns zoom + GPU hinting — desktop appearance unchanged */
+@media (min-width: 768px) {
+  .hero-photo {
+    will-change: opacity, transform;
+  }
+
+  @keyframes heroSlide {
+    0%   { opacity: 0; transform: scale(1.0); }
+    5%   { opacity: 1; transform: scale(1.02); }
+    25%  { opacity: 1; transform: scale(1.08); }
+    30%  { opacity: 0; transform: scale(1.09); }
+    100% { opacity: 0; transform: scale(1.0); }
+  }
 }
 
 /* Dark vignette overlay — kept heavier in the center where text lives */
