@@ -956,7 +956,7 @@ details.day summary:hover {
 
 .slot {
   display: grid;
-  grid-template-columns: 82px 1fr;
+  grid-template-columns: 100px 1fr;
   gap: 0.75rem;
   align-items: start;
 }
@@ -1016,7 +1016,7 @@ details.day summary:hover {
   }
 
   .slot {
-    grid-template-columns: 72px 1fr;
+    grid-template-columns: 90px 1fr;
   }
 
   .countdown-unit {
