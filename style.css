@@ -752,6 +752,12 @@ a.gr:hover .gr-loc {
   background-color: #050f05;
 }
 
+.stop-visual--fiji {
+  /* Add a Fiji beach photo here once hotel is confirmed */
+  background: linear-gradient(155deg, #003d5b 0%, #005a7a 40%, #003d5b 100%);
+  background-color: #003d5b;
+}
+
 .stop-visual--tbd {
   background: linear-gradient(155deg, #0e0c18 0%, #181628 50%, #0e0c18 100%);
 }

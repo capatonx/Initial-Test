@@ -43,12 +43,13 @@ setInterval(updateCountdown, 1000);
 
 /* ── Leaflet map ── */
 const STOPS = [
-  { id: 'waiheke',    name: 'Waiheke Island',         latlng: [-36.788, 175.085], color: '#c4903a', hotel: 'Waiheke Island Resort',      dates: 'Nov 8 – 10' },
-  { id: 'raglan',     name: 'Raglan',                  latlng: [-37.805, 174.874], color: '#2aa0c8', hotel: 'Te Whaanga Retreat & Spa',    dates: 'Nov 10 – 12' },
-  { id: 'rotorua',    name: 'Rotorua / Lake Rotoiti',  latlng: [-38.037, 176.370], color: '#58b458', hotel: 'VR Rotorua Lake Resort',      dates: 'Nov 12 – 13' },
-  { id: 'queenstown', name: 'Queenstown',               latlng: [-45.031, 168.663], color: '#4088c8', hotel: 'Kamana Lakehouse',            dates: 'Nov 13 – 18' },
-  { id: 'milford',    name: 'Milford Sound',            latlng: [-44.655, 167.927], color: '#28a898', hotel: 'Overnight Cruise',            dates: 'Nov 18 – 19' },
-  { id: 'manapouri',  name: 'Manapouri',                latlng: [-45.543, 167.598], color: '#50b050', hotel: 'Cabot Lodge',                 dates: 'Nov 19 – 21' },
+  { id: 'waiheke',    name: 'Waiheke Island',  latlng: [-36.788, 175.085], color: '#c4903a', hotel: 'Home on Waiheke',       dates: 'Nov 8 – 10'  },
+  { id: 'raglan',     name: 'Raglan',           latlng: [-37.805, 174.874], color: '#2aa0c8', hotel: 'Home in Raglan',        dates: 'Nov 10 – 12' },
+  { id: 'rotorua',    name: 'Rotorua',          latlng: [-38.037, 176.370], color: '#58b458', hotel: 'Regent of Rotorua',    dates: 'Nov 12 – 13' },
+  { id: 'queenstown', name: 'Queenstown',       latlng: [-45.031, 168.663], color: '#4088c8', hotel: 'QT Queenstown',        dates: 'Nov 13 – 18' },
+  // Milford Sound is a day trip from Cabot Lodge — pin kept for geographic reference, scrolls to Fiordland section
+  { id: 'milford',    name: 'Milford Sound',    latlng: [-44.655, 167.927], color: '#28a898', hotel: 'Day cruise from Cabot', dates: 'Nov 19'      },
+  { id: 'manapouri',  name: 'Fiordland',        latlng: [-45.543, 167.598], color: '#50b050', hotel: 'Cabot Lodge',           dates: 'Nov 18 – 21' },
 ];
 
 /* Build a numbered teardrop pin; active = slightly larger with brighter stroke */
@@ -109,9 +110,11 @@ if (mapEl) {
       offset: [0, -44],
     });
 
-    // Click scrolls directly to the stop card (no popup needed — card has all the detail)
+    // Click scrolls directly to the stop card.
+    // Milford Sound is now a day trip from Cabot Lodge — its pin scrolls to the Fiordland section.
     marker.on('click', () => {
-      const target = document.getElementById(stop.id);
+      const scrollId = stop.id === 'milford' ? 'manapouri' : stop.id;
+      const target = document.getElementById(scrollId);
       if (!target) return;
       const details = target.querySelector('.stop-expand');
       if (details) details.open = true;
