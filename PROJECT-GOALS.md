@@ -87,8 +87,8 @@ Two-channel approach: **GitHub email** (automatic, no setup) + **Telegram** (ins
    Look for `"chat":{"id":XXXXXXXXX}` in the response — that number is your chat ID
 
 6. When setting up the scheduled task on claude.ai, add these as environment variables:
-   - `TELEGRAM_TOKEN` = your bot token
-   - `TELEGRAM_CHAT_ID` = your chat ID
+   - `TELEGRAM_TOKEN` = your bot token (store in password manager, never commit to repo)
+   - `TELEGRAM_CHAT_ID` = `-5200165090` (Honeymoon Planning group — this is safe to store)
 
 ### Notification Command (Claude adds this at the end of each task run)
 
