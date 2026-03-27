@@ -894,7 +894,7 @@ a.gr:hover .gr-loc {
 
 .placeholder-box p {
   font-size: 0.9rem;
-  color: var(--text-placeholder);
+  color: var(--text-muted);
   font-style: italic;
   line-height: 1.6;
 }
