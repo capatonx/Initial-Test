@@ -29,3 +29,4 @@ Read these two files first:
 - Do not change the dark theme or gold accent color scheme
 - Do not open a PR without a clear summary of what changed and what still needs human input
 - Keep code commented and readable — the site owner is learning
+- Whenever you modify index.html, also update TRIP-CONTEXT.md to reflect the current state of the trip — this file is read by the Telegram bot and must stay accurate
