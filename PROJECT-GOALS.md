@@ -46,66 +46,10 @@ Nothing gets implemented without approval. The PR is the gate.
 
 ---
 
-## Review Prompt (use this to kick off a session)
+## Notifications
 
-Paste this into Claude Code or use it as a scheduled task prompt:
-
-```
-Read index.html and PROJECT-GOALS.md in this directory.
-
-Review the current state of the site against the open items list.
-Pick the 3–5 highest-value items to address next — prioritize things
-that are close to complete or need the least new information.
-
-For each item:
-- Summarize what's missing
-- Research and propose 2–3 options where applicable (restaurants, hotels, etc.)
-- Draft the copy or code change
-
-Push the drafts to a branch (claude/review-YYYY-MM-DD) and open a pull request
-summarizing what was done and what still needs human input (e.g. personal
-booking references, preferences between options).
-
-Keep the tone consistent with the existing site: refined travel luxury,
-dark theme, gold accents.
-```
-
----
-
-## Notifications Setup
-
-Two-channel approach: **GitHub email** (automatic, no setup) + **Telegram** (instant ping with PR link).
-
-### Telegram Bot Setup (one-time, ~5 minutes)
-
-1. Open Telegram and message `@BotFather`
-2. Send `/newbot` and follow the prompts — choose a name and username for your bot
-3. BotFather gives you a **bot token** (looks like `123456789:ABCdef...`) — save this
-4. Search for your new bot in Telegram and send it any message (this lets it find your chat ID)
-5. Get your **chat ID** by visiting this URL in a browser (replace TOKEN with yours):
-   `https://api.telegram.org/bot{TOKEN}/getUpdates`
-   Look for `"chat":{"id":XXXXXXXXX}` in the response — that number is your chat ID
-
-6. When setting up the scheduled task on claude.ai, add these as environment variables:
-   - `TELEGRAM_TOKEN` = your bot token (store in password manager, never commit to repo)
-   - `TELEGRAM_CHAT_ID` = `-5200165090` (Honeymoon Planning group — this is safe to store)
-
-### Notification Command (Claude adds this at the end of each task run)
-
-```bash
-curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_TOKEN/sendMessage" \
-  -d "chat_id=$TELEGRAM_CHAT_ID" \
-  -d "text=Honeymoon site review complete. PR ready for your review: {PR_URL}"
-```
-
-### Add this line to the Review Prompt
-
-At the end of the review prompt, append:
-```
-When the PR is created, send a Telegram notification using the TELEGRAM_TOKEN
-and TELEGRAM_CHAT_ID environment variables with the PR URL and a one-line summary
-of what was changed.
-```
+Two-channel approach: GitHub email (automatic) + Telegram (instant ping with PR link).
+Telegram notifications configured and running via scheduled remote trigger — see claude.ai/code/scheduled for details.
 
 ---
 
