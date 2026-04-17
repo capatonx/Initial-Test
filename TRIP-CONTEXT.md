@@ -56,18 +56,20 @@
 
 ### Stop 5: Fiordland (Manapouri)
 - **Dates:** November 18–21, 2026 (3 nights)
-- **Accommodation:** Cabot Lodge
-- **Transfer:** Drive from Queenstown (~2.5 hrs)
-- **Highlights:** Milford Sound day cruise (Real NZ or Go Orange), fly fishing
-- **Departure (Nov 21):** Drive to Queenstown Airport (ZQN) by 7–8 am, fly ZQN → AKL → NAN
+- **Accommodation:** Cabot Lodge (Lake Manapouri, Southland)
+- **Transfer in (Nov 18):** Drive from Queenstown via SH6 (Kingston → Queenstown–Te Anau Hwy) ~2.5–3 hrs. Depart Queenstown by 10 am to arrive early afternoon.
+- **Day 2 — Milford Sound (Nov 19):** Depart lodge by 7:30 am. Drive Te Anau → Milford Road (SH94) ~2 hrs. Stop at Mirror Lakes and The Chasm. Target 11 am or midday cruise. Operators: Real NZ (realnz.com) or Go Orange. Return to lodge by 5–6 pm.
+- **Day 3 — Fly fishing (Nov 20):** Arranged by Cabot Lodge. Typical start 8 am. Helicopter access to backcountry rivers available. Guide handles lunch and licence.
+- **Departure (Nov 21):** Leave lodge by 7:00–7:30 am. Drive to ZQN (~175 km, ~2.5 hrs). Fly ZQN → AKL → NAN.
 - **November weather:** 14–19°C; heavy rainfall expected; sandflies are severe — DEET (40%+) non-negotiable
 
 ### Stop 6: Fiji (Momi Bay)
 - **Dates:** November 21–26, 2026 (5 nights)
 - **Accommodation:** Marriott Resort Momi Bay (~45 min south of Nadi Airport)
-- **Transfer in:** Flight ZQN → AKL → NAN; resort transfer from Nadi Airport
-- **Highlights:** Scuba diving (Aqua-Trek on-site / Subsurface Fiji), fishing charter (Reel Fiji from Port Denarau), Cloud 9 floating bar, snorkeling, Port Denarau marina dining (Indigo, Nadina, Rhum-Ba)
-- **Return:** November 26, NAN → LAX → JFK/EWR
+- **Transfer in (Nov 21):** Flight ZQN → AKL (~1.5 hrs) → NAN (~3.5 hrs, Fiji Airways FJ810 or Air NZ codeshare). Allow 2–3 hrs connection in AKL. Arrive Nadi mid-to-late afternoon. Marriott paid resort transfer (book in advance) or taxi (~FJD 50–70).
+- **Day trips from Port Denarau (Nov 23–24):** Port Denarau Marina is ~45 min north of Momi Bay. Fishing charter (Reel Fiji) and Cloud 9 / Mamanuca departures from Denarau — combine with dinner at Indigo or Rhum-Ba.
+- **Highlights:** Scuba diving (Aqua-Trek on-site / Subsurface Fiji), fishing charter (Reel Fiji), Cloud 9 floating bar, snorkeling, Port Denarau marina dining (Indigo, Nadina, Rhum-Ba)
+- **Return (Nov 26):** NAN → LAX (~10.5 hrs, Fiji Airways FJ801) → JFK/EWR (~5.5 hrs). NAN departures typically early morning. Arrival back in NYC likely Nov 27 afternoon/evening. Allow for possible LAX overnight buffer if connection timing is messy.
 - **November weather:** 27–31°C, humid; warm mornings ideal for water activities, brief afternoon showers
 
 ---
@@ -86,4 +88,4 @@
 
 See PROJECT-GOALS.md for the full checklist.
 
-*Last updated: April 2026 — travel logistics filled in for all stops; weather sections and Fiji activity operators added.*
+*Last updated: April 2026 — Fiordland and Fiji travel logistics expanded with full route detail, timing, and transfer info. Fiordland day slots (Milford Sound, fly fishing) and Fiji arrival day filled in.*
