@@ -66,3 +66,5 @@ Telegram notifications configured and running via scheduled remote trigger — s
 ## Session History
 
 - **March 2026** — Discussed remote trigger / scheduled task approach for making site changes from any device. Decided on GitHub PR workflow as the approval mechanism. Chose GitHub email + Telegram bot for notifications. Telegram setup steps documented above.
+- **April 2026 (Dispatch sessions)** — Filled in travel logistics for all NZ stops. Added weather sections for all destinations. Upgraded Raglan logistics. Added restaurant guides for Raglan, Queenstown, Rotorua. Added Fiji water activities and port logistics. Expanded Fiordland and Fiji day slots. Added TRIP-CONTEXT.md for Telegram bot context. Updated Fiji hotel to Marriott Resort Momi Bay.
+- **April 2026 (Interactive)** — Added per-day Restaurants slot (restaurant options) and Resy's slot (confirmed reservations) to every day across all stops. Renamed general "Restaurant Guide" sections to "Other Restaurants". Clarified PR workflow (interactive vs. scheduled) and tightened TRIP-CONTEXT.md sync rule in CLAUDE.md.

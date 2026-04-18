@@ -12,10 +12,8 @@ Read these two files first:
 ## Workflow
 
 - Pick 3–5 highest-value open items from PROJECT-GOALS.md
-- Push changes to a `claude/review-YYYY-MM-DD` branch and open a GitHub PR
-- Nothing goes live without a PR merge — the PR is the approval gate
-- After opening a PR, send two Telegram messages to the Honeymoon Planning group
-  (chat ID and bot token are in the scheduled trigger prompt — not stored here)
+- **Scheduled / autonomous sessions:** push to a `claude/review-YYYY-MM-DD` branch, open a GitHub PR, and send two Telegram messages to the Honeymoon Planning group (chat ID and bot token are in the scheduled trigger prompt — not stored here). Nothing goes live without a PR merge — the PR is the approval gate.
+- **Interactive sessions (user present in chat):** may commit directly to `main` with user approval in conversation. PR flow not required when the user is reviewing live.
 
 ## Tech Stack
 
@@ -29,4 +27,4 @@ Read these two files first:
 - Do not change the dark theme or gold accent color scheme
 - Do not open a PR without a clear summary of what changed and what still needs human input
 - Keep code commented and readable — the site owner is learning
-- Whenever you modify index.html, also update TRIP-CONTEXT.md to reflect the current state of the trip — this file is read by the Telegram bot and must stay accurate
+- Update TRIP-CONTEXT.md whenever you change trip details in index.html (dates, accommodations, flights, transfers, activities, bookings). UI or style-only changes (new sections, placeholder slots, visual tweaks) do not require a sync.

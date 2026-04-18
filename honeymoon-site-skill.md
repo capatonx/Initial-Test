@@ -119,14 +119,29 @@ Keep it simple and flat:
 
 ```
 /
-├── index.html
-├── style.css
-├── script.js
-├── images/          (destination photos if added locally)
-└── README.md        (brief description of the project)
+├── index.html           (main site)
+├── style.css            (all styles)
+├── script.js            (all JS)
+├── CLAUDE.md            (session rules and workflow)
+├── PROJECT-GOALS.md     (open items, ideas, session history)
+├── honeymoon-site-skill.md  (this file — design standards and code rules)
+├── TRIP-CONTEXT.md      (trip state for the Telegram bot — keep in sync with index.html)
+└── telegram_offset.json (Telegram bot state — do not delete)
 ```
 
 Do not introduce build tools, bundlers, package managers, or framework dependencies unless explicitly requested.
+
+## Day Slot Structure
+
+Each day in the Full Itinerary uses these slots in order:
+
+- **Morning** — activities and plans for the morning
+- **Midday** — midday activities or travel
+- **Evening** — evening plans and dinner notes
+- **Restaurants** — restaurant options being considered for that day (not confirmed yet)
+- **Resy's** — confirmed reservations and booking references
+
+Keep these two separate: **Restaurants** is a shortlist of options; **Resy's** is what's actually booked. Do not merge them.
 
 ## What NOT to Do
 
