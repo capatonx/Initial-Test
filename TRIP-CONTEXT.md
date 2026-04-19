@@ -26,7 +26,7 @@
 
 ### Stop 2: Raglan
 - **Dates:** November 10–12, 2026 (2 nights)
-- **Accommodation:** Home in Raglan (TBC — not yet booked)
+- **Accommodation:** Home in Raglan (TBC — not yet booked; options added to site: private holiday home via Bookabach on Whaanga Rd/Marine Parade recommended, Solscape Eco Retreat as fallback)
 - **Transfer:** Ferry back to Auckland, pick up rental car (Auckland CBD), drive ~2 hrs via SH1/SH23
 - **Car hire note:** Automatic transmission recommended (driving on left for first time); Go Rentals, Budget, Avis, or Europcar. Compact SUV (RAV4 class) recommended — suits NZ roads and the Cabot Lodge access road later.
 - **Highlights:** Surfing, Bridal Veil Falls, harbour walks
@@ -88,4 +88,4 @@
 
 See PROJECT-GOALS.md for the full checklist.
 
-*Last updated: April 2026 — Fiordland and Fiji travel logistics expanded with full route detail, timing, and transfer info. Fiordland day slots (Milford Sound, fly fishing) and Fiji arrival day filled in.*
+*Last updated: April 2026 — Raglan accommodation options added (Bookabach private home recommended, Solscape fallback). Fiji day slots expanded with specific operator details: Aqua-Trek dive booking (Day 2), Reel Fiji charter timing and Indigo dinner (Day 3), Cloud 9 Mamanuca booking and Rhum-Ba sundowners (Day 4), Momi Bay beach/snorkel day (Day 5). Queenstown Day 2 evening updated with specific Rātā booking guidance.*
