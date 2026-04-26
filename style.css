@@ -463,6 +463,144 @@ a.gr:hover .gr-loc {
   border-bottom: 1px solid var(--border);
 }
 
+/* ════════════════════════════════════════════
+   PACKING LIST
+   Collapsible accordion categories using <details>/<summary>.
+   No JavaScript required — browser handles open/close natively.
+════════════════════════════════════════════ */
+.packing-section {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.packing-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+}
+
+.packing-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.packing-header h2 {
+  font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.packing-header p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+/* Each collapsible category card */
+.pack-cat {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+/* The clickable category header row */
+.pack-cat-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  border-bottom: 1px solid transparent;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+/* Hide the default browser triangle marker */
+.pack-cat-head::-webkit-details-marker { display: none; }
+.pack-cat-head::marker { display: none; }
+
+/* When open, show the separator between header and list */
+.pack-cat[open] > .pack-cat-head {
+  border-bottom-color: var(--border);
+}
+
+.pack-cat-head:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.pack-cat-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.01em;
+}
+
+/* Chevron icon — rotates 180° when the category is open */
+.pack-chevron {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+}
+
+.pack-chevron svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.pack-cat[open] .pack-chevron {
+  transform: rotate(180deg);
+}
+
+/* Bullet list inside each category */
+.pack-list {
+  list-style: none;
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.pack-list li {
+  position: relative;
+  padding-left: 1.25em;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text);
+  margin-bottom: 0.65rem;
+}
+
+.pack-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Gold dot bullet */
+.pack-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.58em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.5;
+}
+
+/* Print: expand all categories automatically */
+@media print {
+  .pack-cat > *:not(summary) { display: block !important; }
+  .pack-chevron { display: none; }
+}
+
 .summary-inner {
   max-width: 860px;
   margin: 0 auto;
