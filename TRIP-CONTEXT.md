@@ -29,7 +29,7 @@
 - **Accommodation:** Home in Raglan (TBC — not yet booked; options added to site: private holiday home via Bookabach on Whaanga Rd/Marine Parade recommended, Solscape Eco Retreat as fallback)
 - **Transfer:** Ferry back to Auckland, pick up rental car (Auckland CBD), drive ~2 hrs via SH1/SH23
 - **Car hire note:** Automatic transmission recommended (driving on left for first time); Go Rentals, Budget, Avis, or Europcar. Compact SUV (RAV4 class) recommended — suits NZ roads and the Cabot Lodge access road later.
-- **Highlights:** Surfing, Bridal Veil Falls, harbour walks
+- **Highlights:** Surfing (Ngarunui / Manu Bay), Waireinga/Bridal Veil Falls (~22 km south, 55 m waterfall, ~1 hr), harbour walks
 - **Departure (Nov 12):** Drive Raglan → Hobbiton (~1.5 hrs, depart ~7:30 am for 9:30 am tour)
 - **November weather:** 16–21°C, breezy west coast; start of surf season — check Magic Seaweed the evening before
 
@@ -80,7 +80,8 @@
 - Raglan accommodation (Stop 2) still to be booked — all other accommodations confirmed
 - No confirmation/reservation reference numbers recorded yet
 - Key activity bookings still needed: Hobbiton (hobbitontours.com), Kaituna rafting, OTT heli hike, Milford Sound cruise, Aqua-Trek / Subsurface Fiji dive, Reel Fiji fishing charter, Cloud 9
-- Restaurant bookings needed: Rātā (Queenstown), The Oyster Inn / Mudbrick / Tantalus (Waiheke), Indigo (Fiji)
+- Rātā (Queenstown) booked for both Nov 13 and Nov 14 — cancel the Nov 13 reservation, keep Nov 14 (post-Ben Lomond)
+- Restaurant bookings still needed: The Oyster Inn / Mudbrick / Tantalus (Waiheke), Indigo (Fiji)
 
 ---
 
@@ -88,4 +89,4 @@
 
 See PROJECT-GOALS.md for the full checklist.
 
-*Last updated: April 2026 — Raglan accommodation options added (Bookabach private home recommended, Solscape fallback). Fiji day slots expanded with specific operator details: Aqua-Trek dive booking (Day 2), Reel Fiji charter timing and Indigo dinner (Day 3), Cloud 9 Mamanuca booking and Rhum-Ba sundowners (Day 4), Momi Bay beach/snorkel day (Day 5). Queenstown Day 2 evening updated with specific Rātā booking guidance.*
+*Last updated: April 2026 — Raglan Day 2 Midday expanded with full Waireinga/Bridal Veil Falls detail (route, two viewing tracks, ~1 hr). Rotorua Day 1 Morning expanded with Hobbiton address, 2-hr tour breakdown, photography tips. Rotorua Day 1 Midday expanded with Green Dragon lunch options, 2 pm Kaituna session timing, and Tutea Falls context. Rātā cancellation clarified: cancel Nov 13 booking, keep Nov 14 (post-Ben Lomond). Packing list section added as PR #3 (structural change, pending review).*
