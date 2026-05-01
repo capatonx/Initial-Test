@@ -89,4 +89,4 @@
 
 See PROJECT-GOALS.md for the full checklist.
 
-*Last updated: April 2026 — Raglan Day 2 Midday expanded with full Waireinga/Bridal Veil Falls detail (route, two viewing tracks, ~1 hr). Rotorua Day 1 Morning expanded with Hobbiton address, 2-hr tour breakdown, photography tips. Rotorua Day 1 Midday expanded with Green Dragon lunch options, 2 pm Kaituna session timing, and Tutea Falls context. Rātā cancellation clarified: cancel Nov 13 booking, keep Nov 14 (post-Ben Lomond). Packing list section added as PR #3 (structural change, pending review).*
+*Last updated: May 2026 — Waiheke Day 1 Morning expanded with Auckland customs/biosecurity tips and SkyBus vs taxi guidance. Waiheke Day 1 Midday expanded with Fullers360 ferry detail and check-in tone. Waiheke Day 2 Evening filled in with vineyard day close and Tantalus dinner recommendation. Rotorua Day 2 Morning filled in with airport taxi, car return, and ROT→AKL departure details. Rotorua Day 2 Midday filled in with AKL domestic connection and ZQN descent tip. Rotorua Day 2 Evening filled in with QT check-in, Steamer Wharf first look, and Blue Kanu / Public Kitchen dinner options.*
