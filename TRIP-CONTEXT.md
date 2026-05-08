@@ -76,12 +76,12 @@
 
 ## Booking Status
 
-- 18 nights confirmed across all 6 stops
-- Raglan accommodation (Stop 2) still to be booked — all other accommodations confirmed
+- 18 nights planned · Raglan accommodation (Stop 2) still to be booked — all other accommodations confirmed
 - No confirmation/reservation reference numbers recorded yet
 - Key activity bookings still needed: Hobbiton (hobbitontours.com), Kaituna rafting, OTT heli hike, Milford Sound cruise, Aqua-Trek / Subsurface Fiji dive, Reel Fiji fishing charter, Cloud 9
 - Rātā (Queenstown) booked for both Nov 13 and Nov 14 — cancel the Nov 13 reservation, keep Nov 14 (post-Ben Lomond)
-- Restaurant bookings still needed: The Oyster Inn / Mudbrick / Tantalus (Waiheke), Indigo (Fiji)
+- Restaurant bookings still needed: The Oyster Inn (Waiheke Day 1), Casita Miro + Tantalus or Mudbrick (Waiheke Day 2), Atticus Finch (Rotorua Day 1), Indigo (Fiji Day 3 and Day 5)
+- All Resy's slots in site now filled: walk-in notes for casual venues; booking reminders with links for advance-reservation venues; Fiordland lodge-inclusive meal confirmations
 
 ---
 
@@ -89,4 +89,4 @@
 
 See PROJECT-GOALS.md for the full checklist.
 
-*Last updated: May 2026 — Waiheke Day 1 Evening filled in (Three Seven Two / Oyster Inn, jet-lag pacing note; placeholder removed). Raglan Day 2 Evening filled in (Raglan Wharf Kitchen dinner, pack bags, Hobbiton reminder; placeholder removed). Queenstown Day 1 Resy's corrected — misleading Nov 13 Rātā entry replaced with cancellation action item (keep Nov 14 booking, dine at Blue Kanu / Public Kitchen on arrival night). Full Itinerary section header updated from "18 nights confirmed" to "18 nights planned · Raglan accommodation TBC".*
+*Last updated: May 8, 2026 — All 15 Resy's placeholder slots filled in across all stops. Waiheke: The Oyster Inn and Casita Miro / Tantalus booking reminders added. Rotorua: Atticus Finch booking reminder. Raglan Day 1: walk-in note for Raglan Wharf Kitchen. Fiordland Days 1–3: Cabot Lodge inclusive-meal confirmations. Fiji: Indigo booking reminders for Days 3 and 5; walk-in notes for all resort restaurants. Booking Status section corrected to "18 nights planned · Raglan TBC".*
