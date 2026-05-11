@@ -26,10 +26,10 @@
 
 ### Stop 2: Raglan
 - **Dates:** November 10–12, 2026 (2 nights)
-- **Accommodation:** Home in Raglan (TBC — not yet booked)
+- **Accommodation:** Home in Raglan (TBC — not yet booked; options added to site: private holiday home via Bookabach on Whaanga Rd/Marine Parade recommended, Solscape Eco Retreat as fallback)
 - **Transfer:** Ferry back to Auckland, pick up rental car (Auckland CBD), drive ~2 hrs via SH1/SH23
 - **Car hire note:** Automatic transmission recommended (driving on left for first time); Go Rentals, Budget, Avis, or Europcar. Compact SUV (RAV4 class) recommended — suits NZ roads and the Cabot Lodge access road later.
-- **Highlights:** Surfing, Bridal Veil Falls, harbour walks
+- **Highlights:** Surfing (Ngarunui / Manu Bay), Waireinga/Bridal Veil Falls (~22 km south, 55 m waterfall, ~1 hr), harbour walks
 - **Departure (Nov 12):** Drive Raglan → Hobbiton (~1.5 hrs, depart ~7:30 am for 9:30 am tour)
 - **November weather:** 16–21°C, breezy west coast; start of surf season — check Magic Seaweed the evening before
 
@@ -76,11 +76,12 @@
 
 ## Booking Status
 
-- 18 nights confirmed across all 6 stops
-- Raglan accommodation (Stop 2) still to be booked — all other accommodations confirmed
+- 18 nights planned · Raglan accommodation (Stop 2) still to be booked — all other accommodations confirmed
 - No confirmation/reservation reference numbers recorded yet
 - Key activity bookings still needed: Hobbiton (hobbitontours.com), Kaituna rafting, OTT heli hike, Milford Sound cruise, Aqua-Trek / Subsurface Fiji dive, Reel Fiji fishing charter, Cloud 9
-- Restaurant bookings needed: Rātā (Queenstown), The Oyster Inn / Mudbrick / Tantalus (Waiheke), Indigo (Fiji)
+- Rātā (Queenstown) booked for both Nov 13 and Nov 14 — cancel the Nov 13 reservation, keep Nov 14 (post-Ben Lomond)
+- Restaurant bookings still needed: The Oyster Inn (Waiheke Day 1), Casita Miro + Tantalus or Mudbrick (Waiheke Day 2), Atticus Finch (Rotorua Day 1), Indigo (Fiji Day 3 and Day 5)
+- All Resy's slots in site now filled: walk-in notes for casual venues; booking reminders with links for advance-reservation venues; Fiordland lodge-inclusive meal confirmations
 
 ---
 
@@ -88,4 +89,4 @@
 
 See PROJECT-GOALS.md for the full checklist.
 
-*Last updated: April 2026 — Fiordland and Fiji travel logistics expanded with full route detail, timing, and transfer info. Fiordland day slots (Milford Sound, fly fishing) and Fiji arrival day filled in.*
+*Last updated: May 8, 2026 — All 15 Resy's placeholder slots filled in across all stops. Waiheke: The Oyster Inn and Casita Miro / Tantalus booking reminders added. Rotorua: Atticus Finch booking reminder. Raglan Day 1: walk-in note for Raglan Wharf Kitchen. Fiordland Days 1–3: Cabot Lodge inclusive-meal confirmations. Fiji: Indigo booking reminders for Days 3 and 5; walk-in notes for all resort restaurants. Booking Status section corrected to "18 nights planned · Raglan TBC".*
