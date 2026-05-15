@@ -89,4 +89,4 @@
 
 See PROJECT-GOALS.md for the full checklist.
 
-*Last updated: May 8, 2026 — All 15 Resy's placeholder slots filled in across all stops. Waiheke: The Oyster Inn and Casita Miro / Tantalus booking reminders added. Rotorua: Atticus Finch booking reminder. Raglan Day 1: walk-in note for Raglan Wharf Kitchen. Fiordland Days 1–3: Cabot Lodge inclusive-meal confirmations. Fiji: Indigo booking reminders for Days 3 and 5; walk-in notes for all resort restaurants. Booking Status section corrected to "18 nights planned · Raglan TBC".*
+*Last updated: May 15, 2026 — Resy's slots updated: Waiheke Day 2 now includes optional dinner booking reminder for Casita Miró / Tantalus Estate. Fiji Day 2 now includes Aqua-Trek Momi Bay dive booking reminder (previously only in Morning text). Fiji Day 3 now includes Reel Fiji fishing charter booking reminder (previously only in Morning text). No trip details changed; these are booking-action additions only.*
