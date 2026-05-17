@@ -89,4 +89,4 @@
 
 See PROJECT-GOALS.md for the full checklist.
 
-*Last updated: May 15, 2026 — Resy's slots updated: Waiheke Day 2 now includes optional dinner booking reminder for Casita Miró / Tantalus Estate. Fiji Day 2 now includes Aqua-Trek Momi Bay dive booking reminder (previously only in Morning text). Fiji Day 3 now includes Reel Fiji fishing charter booking reminder (previously only in Morning text). No trip details changed; these are booking-action additions only.*
+*Last updated: May 17, 2026 — Urgency updates: Raglan accommodation deadline callout strengthened (< 6 weeks to June 2026 deadline); Bookabach/Airbnb search guidance expanded with street names, filter tips, and price range. NYC Departure flight note updated: May 2026 is the prime booking window right now, end-of-May target set. Rotorua Hobbiton note updated: Book immediately — specific Nov 12 morning slots sell 3–4 months ahead. No trip details or accommodations changed; these are booking-urgency text updates only.*
