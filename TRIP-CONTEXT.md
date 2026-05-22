@@ -89,4 +89,4 @@
 
 See PROJECT-GOALS.md for the full checklist.
 
-*Last updated: May 17, 2026 — Urgency updates: Raglan accommodation deadline callout strengthened (< 6 weeks to June 2026 deadline); Bookabach/Airbnb search guidance expanded with street names, filter tips, and price range. NYC Departure flight note updated: May 2026 is the prime booking window right now, end-of-May target set. Rotorua Hobbiton note updated: Book immediately — specific Nov 12 morning slots sell 3–4 months ahead. No trip details or accommodations changed; these are booking-urgency text updates only.*
+*Last updated: May 22, 2026 — Pre-departure checklist added to NYC Departure section: NZ eTA (required for US citizens, apply in advance at immigration.govt.nz), passport validity (6 months beyond Nov 26 return = valid through May 2027), Fiji entry (visa-free for US citizens, no advance action needed), travel insurance guidance. Flight booking deadline corrected to end of June 2026 (was incorrectly showing end of May). US driver's licence note added to Raglan logistics: valid in NZ for 12 months, physical licence required. No trip details or accommodations changed.*
