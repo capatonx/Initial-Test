@@ -89,4 +89,4 @@
 
 See PROJECT-GOALS.md for the full checklist.
 
-*Last updated: May 24, 2026 — Content additions (direct to main): Type I power adapter note added to pre-departure checklist (one adapter covers NZ + Fiji); offline Google Maps download instructions added (covers all NZ driving regions); Magic Seaweed and Surf-Forecast.com references in Raglan weather section converted to clickable links; MetService mountain forecast linked in Queenstown weather section. No trip details or accommodations changed. PR #4 open for review: adds a collapsible "What to Pack" section with 7 destination-aware categories (documents, clothing, hiking gear, Fiordland essentials, Fiji/beach, tech, health).*
+*Last updated: May 29, 2026 — Full Itinerary header corrected from "18 nights planned" to "20 nights" (consistent with rest of site; Raglan TBC note retained). Raglan accommodation urgency updated to reflect deadline is NOW (June 2026 is 2 days away). No trip details or accommodations changed. PR #4 still open for review: adds a collapsible "What to Pack" section with 7 destination-aware categories.*
