@@ -80,6 +80,7 @@
 - No confirmation/reservation reference numbers recorded yet
 - Key activity bookings still needed: Hobbiton (hobbitontours.com), Kaituna rafting, OTT heli hike, Milford Sound cruise, Aqua-Trek / Subsurface Fiji dive, Reel Fiji fishing charter, Cloud 9
 - Rātā (Queenstown) booked for both Nov 13 and Nov 14 — cancel the Nov 13 reservation, keep Nov 14 (post-Ben Lomond)
+- Botswana Butchery (Queenstown Day 3, post-heli hike) — 6:00 pm, lakeside terrace, confirmed
 - Restaurant bookings still needed: The Oyster Inn (Waiheke Day 1), Casita Miro + Tantalus or Mudbrick (Waiheke Day 2), Atticus Finch (Rotorua Day 1), Indigo (Fiji Day 3 and Day 5)
 - All Resy's slots in site now filled: walk-in notes for casual venues; booking reminders with links for advance-reservation venues; Fiordland lodge-inclusive meal confirmations
 
@@ -89,4 +90,4 @@
 
 See PROJECT-GOALS.md for the full checklist.
 
-*Last updated: May 29, 2026 — Full Itinerary header corrected from "18 nights planned" to "20 nights" (consistent with rest of site; Raglan TBC note retained). Raglan accommodation urgency updated to reflect deadline is NOW (June 2026 is 2 days away). No trip details or accommodations changed. PR #4 still open for review: adds a collapsible "What to Pack" section with 7 destination-aware categories.*
+*Last updated: May 31, 2026 — Added Botswana Butchery (Queenstown Day 3) to confirmed bookings. Added Hobbiton and Kaituna rafting booking reminders to Rotorua Day 1 Resy's slot. Added OTT heli hike booking reminder to Queenstown Day 3 Resy's slot. Fixed Queenstown Day 3 Evening slot to reflect confirmed Botswana Butchery reservation (was incorrectly referencing walk-in alternatives). Added Botswana Butchery to Queenstown Other Restaurants list. No trip dates, accommodations, or logistics changed. PR #4 still open for review: adds a collapsible "What to Pack" section with 7 destination-aware categories.*
