@@ -456,6 +456,153 @@ a.gr:hover .gr-loc {
 }
 
 /* ════════════════════════════════════════════
+   PACKING LIST
+════════════════════════════════════════════ */
+
+/* Outer section — sits between summary itinerary and the full itinerary */
+.packing-section {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.packing-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.packing-inner > h2 {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 0.45rem;
+}
+
+.packing-inner > p {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  margin-bottom: 2.5rem;
+}
+
+/* Grid of collapsible category cards */
+.pack-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Each category is a <details> element */
+.pack-cat {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* The clickable summary row */
+.pack-cat-header {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.1rem;
+  cursor: pointer;
+  user-select: none;
+  /* Prevent the default triangle that some browsers add */
+}
+
+.pack-cat-header::-webkit-details-marker { display: none; }
+
+.pack-cat-header:hover {
+  background: var(--surface-2);
+}
+
+/* Category title text */
+.pack-cat-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--accent);
+  flex: 1;
+}
+
+/* Small destination badge */
+.pack-cat-tag {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.15rem 0.6rem;
+  white-space: nowrap;
+}
+
+/* Chevron rotates when open */
+.pack-chevron {
+  width: 16px;
+  height: 16px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.pack-chevron svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Rotate chevron when category is open */
+.pack-cat[open] .pack-chevron {
+  transform: rotate(180deg);
+}
+
+/* The expanded content area */
+.pack-cat-body {
+  padding: 0.75rem 1.25rem 1.1rem;
+  border-top: 1px solid var(--border);
+}
+
+/* List items inside a category */
+.pack-cat-body ul {
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.pack-cat-body li {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.pack-cat-body li a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.pack-cat-body li a:hover {
+  text-decoration: underline;
+}
+
+/* Footer note below the grid */
+.pack-footer-note {
+  margin-top: 1.75rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+  font-style: italic;
+}
+
+/* ════════════════════════════════════════════
    SUMMARY ITINERARY
 ════════════════════════════════════════════ */
 .summary-section {
