@@ -90,4 +90,4 @@
 
 See PROJECT-GOALS.md for the full checklist.
 
-*Last updated: May 31, 2026 — Added Botswana Butchery (Queenstown Day 3) to confirmed bookings. Added Hobbiton and Kaituna rafting booking reminders to Rotorua Day 1 Resy's slot. Added OTT heli hike booking reminder to Queenstown Day 3 Resy's slot. Fixed Queenstown Day 3 Evening slot to reflect confirmed Botswana Butchery reservation (was incorrectly referencing walk-in alternatives). Added Botswana Butchery to Queenstown Other Restaurants list. No trip dates, accommodations, or logistics changed. PR #4 still open for review: adds a collapsible "What to Pack" section with 7 destination-aware categories.*
+*Last updated: June 5, 2026 — Urgency text updates only (no trip detail changes): flight booking note updated to "final weeks of the prime booking window" (fewer than 4 weeks to end-of-June deadline); Raglan accommodation warning updated to reflect the June 2026 deadline has now passed; Hobbiton booking note updated from "~5.5 months out" to "~5 months out" with reinforced sell-out urgency. All trip dates, accommodations, logistics, and bookings remain as of May 31, 2026.*
