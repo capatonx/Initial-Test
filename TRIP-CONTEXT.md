@@ -81,6 +81,7 @@
 - Key activity bookings still needed: Hobbiton (hobbitontours.com), Kaituna rafting, OTT heli hike, Milford Sound cruise, Aqua-Trek / Subsurface Fiji dive, Reel Fiji fishing charter, Cloud 9
 - Rātā (Queenstown) booked for both Nov 13 and Nov 14 — cancel the Nov 13 reservation, keep Nov 14 (post-Ben Lomond)
 - Botswana Butchery (Queenstown Day 3, post-heli hike) — 6:00 pm, lakeside terrace, confirmed
+- The Bunker (Queenstown Day 4, post-wine-tour dinner) — 6:30 pm, underground dining room, confirmed
 - Restaurant bookings still needed: The Oyster Inn (Waiheke Day 1), Casita Miro + Tantalus or Mudbrick (Waiheke Day 2), Atticus Finch (Rotorua Day 1), Indigo (Fiji Day 3 and Day 5)
 - All Resy's slots in site now filled: walk-in notes for casual venues; booking reminders with links for advance-reservation venues; Fiordland lodge-inclusive meal confirmations
 
@@ -90,4 +91,4 @@
 
 See PROJECT-GOALS.md for the full checklist.
 
-*Last updated: June 5, 2026 — Urgency text updates only (no trip detail changes): flight booking note updated to "final weeks of the prime booking window" (fewer than 4 weeks to end-of-June deadline); Raglan accommodation warning updated to reflect the June 2026 deadline has now passed; Hobbiton booking note updated from "~5.5 months out" to "~5 months out" with reinforced sell-out urgency. All trip dates, accommodations, logistics, and bookings remain as of May 31, 2026.*
+*Last updated: June 7, 2026 — Added The Bunker (Queenstown Day 4, 6:30 pm) to confirmed bookings; aligned Queenstown Day 4 Evening and Restaurants slots to match existing Resy's confirmation. Flight urgency countdown updated to "approximately 3 weeks" (June 7 → end-of-June deadline). All trip dates, accommodations, logistics, and activities remain as of May 31, 2026.*
