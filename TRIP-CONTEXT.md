@@ -91,4 +91,4 @@
 
 See PROJECT-GOALS.md for the full checklist.
 
-*Last updated: June 7, 2026 — Added The Bunker (Queenstown Day 4, 6:30 pm) to confirmed bookings; aligned Queenstown Day 4 Evening and Restaurants slots to match existing Resy's confirmation. Flight urgency countdown updated to "approximately 3 weeks" (June 7 → end-of-June deadline). All trip dates, accommodations, logistics, and activities remain as of May 31, 2026.*
+*Last updated: June 12, 2026 — Automated review session. Content changes (direct to main): flight urgency text updated to "fewer than 3 weeks remain" (June 12 → end-of-June deadline); rental car booking callout added to Raglan Travel Logistics (Auckland CBD pickup Nov 10, ROT drop-off Nov 13); ROT→AKL→ZQN domestic flight booking reminder added to Rotorua Day 2 Resy's; Rātā Nov 13 cancellation callout added to Queenstown Location Notes. Structural change (PR #5, pending review): new Pre-Trip Booking Checklist section added between Summary Itinerary and Full Itinerary, consolidating all outstanding bookings by urgency. All trip dates, accommodations, logistics, and activities remain as of May 31, 2026.*
