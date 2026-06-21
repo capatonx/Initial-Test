@@ -592,6 +592,155 @@ a.gr:hover .gr-loc {
 .si--tbd .si-name     { color: var(--text-muted); font-style: italic; }
 
 /* ════════════════════════════════════════════
+   PRE-TRIP BOOKING CHECKLIST
+════════════════════════════════════════════ */
+.checklist-section {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.checklist-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.checklist-inner > h2 {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 0.45rem;
+}
+
+.checklist-inner > p {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  margin-bottom: 2.5rem;
+}
+
+.checklist-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+/* Group heading — matches .ssec h4 style */
+.cg-title {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--accent-border);
+}
+
+/* Urgent group uses a warm-red accent instead of gold */
+.cg--urgent .cg-title {
+  color: #d4705a;
+  border-bottom-color: rgba(212, 112, 90, 0.25);
+}
+
+.cg-list {
+  list-style: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* Each row — mirrors .si grid layout from Summary Itinerary */
+.ci {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  column-gap: 1rem;
+  row-gap: 0.2rem;
+  align-items: start;
+  padding: 0.85rem 1.25rem;
+  border-left: 3px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  transition: background 0.15s;
+}
+
+.ci:last-child {
+  border-bottom: none;
+}
+
+.ci:hover {
+  background: var(--surface-2);
+}
+
+.cg--urgent .ci {
+  border-left-color: rgba(212, 112, 90, 0.55);
+}
+
+/* Item name — primary text */
+.ci-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Secondary description text */
+.ci-note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Optional third line note — slightly indented */
+.ci-note--sub {
+  grid-row: 3;
+  padding-left: 0.6rem;
+}
+
+/* Booking link — spans both rows on the right */
+.ci-link {
+  grid-column: 2;
+  grid-row: 1 / 4;
+  align-self: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+  opacity: 0.8;
+  transition: opacity 0.15s;
+}
+
+.ci-link:hover {
+  opacity: 1;
+}
+
+/* Mobile: stack link below description */
+@media (max-width: 600px) {
+  .ci {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .ci-name  { grid-row: 1; }
+  .ci-note  { grid-row: 2; }
+  .ci-note--sub { grid-row: 3; }
+
+  .ci-link {
+    grid-column: 1;
+    grid-row: 4;
+    margin-top: 0.35rem;
+  }
+}
+
+/* ════════════════════════════════════════════
    ITINERARY WRAPPER
 ════════════════════════════════════════════ */
 .itinerary-wrap {
@@ -1188,6 +1337,7 @@ details.day summary:hover {
   .hero,
   .glance-section,
   .summary-section,
+  .checklist-section,
   .stop-nav,
   .scroll-top,
   .toggle-all-btn,
