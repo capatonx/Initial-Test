@@ -27,7 +27,7 @@ Nothing gets implemented without approval. The PR is the gate.
 
 ## Open Items (updated May 2026)
 
-- [ ] Confirm and add actual flight booking — Air NZ NZ2, JFK→AKL Nov 6. 6-month window now open; book before end of June for Business Premier availability.
+- [ ] Confirm and add actual flight booking — Air NZ NZ2, JFK→AKL Nov 6. ⚠️ 6-month advance window closed June 30 — book now at standard fares; Business Premier may still be available but inventory narrows weekly.
 - [x] Add travel logistics for each stop (transfer times, car hire, ferry/flight details) — done April 2026
 - [x] Fill in day-by-day activities for all stops — done April 2026
 - [x] Add restaurant recommendations for each destination — done April 2026
