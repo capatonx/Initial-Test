@@ -52,7 +52,6 @@
   - E-bike wine tour (Nov 16): Around The Basin or Queenstown Wine Trail — Gibbston Valley, full day, guide included
   - Roy's Peak (Nov 17): Drive to Wanaka (~45 min), 16 km return ~5 hrs, start 7 am
 - **Highlights:** Ben Lomond hike, Mt Cook heli hike, e-bike wine tour, Roy's Peak
-- **November weather:** 15–20°C in town; ridgelines 5–10°C colder; variable — check MetService mountain forecast each morning
 
 ### Stop 5: Fiordland (Manapouri)
 - **Dates:** November 18–21, 2026 (3 nights)
@@ -76,7 +75,8 @@
 
 ## Booking Status
 
-- 18 nights planned · Raglan accommodation (Stop 2) still to be booked — all other accommodations confirmed
+- 20 nights planned · Raglan accommodation (Stop 2) still to be booked — booking deadline has passed, book immediately
+- ⚠️ Air NZ NZ2 flight (JFK→AKL Nov 6) not yet booked — 6-month advance window closed June 30; book now at standard fares
 - No confirmation/reservation reference numbers recorded yet
 - Key activity bookings still needed: Hobbiton (hobbitontours.com), Kaituna rafting, OTT heli hike, Milford Sound cruise, Aqua-Trek / Subsurface Fiji dive, Reel Fiji fishing charter, Cloud 9
 - Rātā (Queenstown) booked for both Nov 13 and Nov 14 — cancel the Nov 13 reservation, keep Nov 14 (post-Ben Lomond)
@@ -84,6 +84,7 @@
 - The Bunker (Queenstown Day 4, post-wine-tour dinner) — 6:30 pm, underground dining room, confirmed
 - Restaurant bookings still needed: The Oyster Inn (Waiheke Day 1), Casita Miro + Tantalus or Mudbrick (Waiheke Day 2), Atticus Finch (Rotorua Day 1), Indigo (Fiji Day 3 and Day 5)
 - All Resy's slots in site now filled: walk-in notes for casual venues; booking reminders with links for advance-reservation venues; Fiordland lodge-inclusive meal confirmations
+- 5 structural PRs remain open and unreviewed (PRs #1–#5): PR #5 (Pre-Trip Booking Checklist) is highest priority to review and merge
 
 ---
 
@@ -91,4 +92,4 @@
 
 See PROJECT-GOALS.md for the full checklist.
 
-*Last updated: June 28, 2026 — Automated review session. Content change (direct to main): flight urgency countdown updated from "4 days remain" to "2 days remain (deadline: June 30, 2026) — 48 hours remaining." Telegram inbox was empty — no messages from Athena/Nic. 5 structural PRs remain open and unreviewed (PRs #1–#5): PR #5 (Pre-Trip Booking Checklist, June 12) is most urgent — please review and merge. CRITICAL: Air NZ NZ2 flight booking deadline is June 30, 2026 (2 days). Raglan accommodation deadline has passed — book immediately. All trip dates, accommodations, logistics, and activities remain as of May 31, 2026.*
+*Last updated: July 3, 2026 — Automated review session. Content change (direct to main): flight urgency notice updated to reflect the 6-month advance booking window closed June 30, 2026. Telegram inbox was empty. No messages from Athena/Nic. 5 structural PRs remain open and unreviewed (PRs #1–#5): PR #5 (Pre-Trip Booking Checklist, June 12) is most urgent — please review and merge. CRITICAL: Air NZ NZ2 flight booking deadline has now passed — book immediately at standard fares. Raglan accommodation also urgently needed.*
