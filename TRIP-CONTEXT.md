@@ -37,7 +37,7 @@
 - **Dates:** November 12–13, 2026 (1 night)
 - **Accommodation:** Regent of Rotorua Boutique Hotel (Hinemaru Street, central Rotorua)
 - **Day logistics:** Raglan → Hobbiton (~1.5 hrs) → Kaituna rafting (~1 hr) → Regent of Rotorua (~20 min). Arrive ~5:30 pm.
-- **Hobbiton:** Book in advance at hobbitontours.com — 9:30 am tour start, November peak season
+- **Hobbiton:** Book in advance at hobbitontours.com — 9:30 am tour start, November peak season. At under 4 months out, call directly; ask about "Breakfast in the Shire" (30-guest max, may have different availability) as well as standard tour
 - **Kaituna rafting:** Kaituna Cascades or K2K Rafting — 7 m Tutea Falls, ~2 hr session, depart Hobbiton ~12:30 pm
 - **Transfer out:** Drive to ROT airport (~20 min), return car at airport, fly ROT → AKL → ZQN
 - **November weather:** 17–22°C, inland warmth; occasional afternoon thunderstorms that pass quickly
@@ -76,15 +76,15 @@
 ## Booking Status
 
 - 20 nights planned · Raglan accommodation (Stop 2) still to be booked — booking deadline has passed, book immediately
-- ⚠️ Air NZ NZ2 flight (JFK→AKL Nov 6) not yet booked — 6-month advance window closed June 30; book now at standard fares
+- ⚠️ Air NZ NZ2 flight (JFK→AKL Nov 6) not yet booked — **under 105 days to departure**; Business Premier inventory critically limited; book Premium Economy if Business Premier sold out; call 1-800-262-1234
 - No confirmation/reservation reference numbers recorded yet
-- Key activity bookings still needed: Hobbiton (hobbitontours.com), Kaituna rafting, OTT heli hike, Milford Sound cruise, Aqua-Trek / Subsurface Fiji dive, Reel Fiji fishing charter, Cloud 9
+- Key activity bookings still needed: Hobbiton (hobbitontours.com — call directly, ask about "Breakfast in the Shire" 30-guest alternative), Kaituna rafting, OTT heli hike, Milford Sound cruise, Aqua-Trek / Subsurface Fiji dive (contact Marriott activities desk via marriott.com before arrival), Reel Fiji fishing charter, Cloud 9
 - Rātā (Queenstown) booked for both Nov 13 and Nov 14 — cancel the Nov 13 reservation, keep Nov 14 (post-Ben Lomond)
 - Botswana Butchery (Queenstown Day 3, post-heli hike) — 6:00 pm, lakeside terrace, confirmed
 - The Bunker (Queenstown Day 4, post-wine-tour dinner) — 6:30 pm, underground dining room, confirmed
 - Restaurant bookings still needed: The Oyster Inn (Waiheke Day 1), Casita Miro + Tantalus or Mudbrick (Waiheke Day 2), Atticus Finch (Rotorua Day 1), Indigo (Fiji Day 3 and Day 5)
 - All Resy's slots in site now filled: walk-in notes for casual venues; booking reminders with links for advance-reservation venues; Fiordland lodge-inclusive meal confirmations
-- 5 structural PRs remain open and unreviewed (PRs #1–#5): PR #5 (Pre-Trip Booking Checklist) is highest priority to review and merge
+- 5 structural PRs remain open and unreviewed (PRs #1–#5): PR #5 (Pre-Trip Booking Checklist) is highest priority; PRs #3 & #4 appear to be duplicate packing list versions — only one should be merged
 
 ---
 
@@ -92,4 +92,4 @@
 
 See PROJECT-GOALS.md for the full checklist.
 
-*Last updated: July 19, 2026 — Automated review session. Telegram inbox empty. Content change (direct to main): strengthened Waiheke Day 2 evening restaurant booking from "optional / not required" to a clear "Book now — under 4 months" action item; added Mudbrick as a third option alongside Casita Miró and Tantalus (all three now listed with booking links). All urgency language consistent across restaurants and activities. 5 structural PRs remain open and unreviewed (PRs #1–#5): PR #5 (Pre-Trip Booking Checklist) is highest priority to review and merge. CRITICAL: Air NZ NZ2 flight (JFK→AKL Nov 6) still not booked — under 4 months to departure. Raglan accommodation still needed. Hobbiton: call directly to check Nov 12 availability.*
+*Last updated: July 24, 2026 — Automated review session. Telegram inbox empty. Content changes (direct to main): (1) added "under 105 days to departure" to the Full Itinerary header; (2) updated flight urgency note to specify day count, add Premium Economy as explicit fallback if Business Premier is sold out, and note that phone agents may surface inventory not visible online; (3) expanded Hobbiton "Breakfast in the Shire" note to specify 30-guest cap and that it may have different availability patterns than the standard tour — worth asking about specifically when calling; (4) Aqua-Trek Fiji Day 2: added guidance to pre-book via Marriott website activities/dive desk before arrival, noting dive reservations are separate from main room booking. 5 structural PRs remain open and unreviewed (PRs #1–#5): PR #5 (Pre-Trip Booking Checklist) is highest priority to review and merge; PRs #3 & #4 are duplicate packing list versions — only one should be merged. CRITICAL: Air NZ NZ2 flight (JFK→AKL Nov 6) still not booked at under 105 days out. Raglan accommodation still needed — booking deadline passed.*
